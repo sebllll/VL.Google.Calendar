@@ -1,0 +1,1526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" Version="0.87">
+  <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="0.35.21" />
+  <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
+  <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
+    <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="IO.gCal">
+      <!--
+
+    ************************ FileDataStore ************************
+
+-->
+      <Node Name="FileDataStore" Bounds="137,268" Id="LtKeeBzUlDROwyng5M7wnz">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Google.Apis.Util.Store" LastSymbolSource="Google.Apis.dll">
+          <Choice Kind="TypeFlag" Name="FileDataStore" />
+        </p:TypeAnnotation>
+        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">true</p:ForwardAllNodesOfTypeDefinition>
+        <Patch Id="TkBOFU5tz39LdDJ0H2LzWH">
+          <Canvas Id="GAcaBso8jWKL7MsM1lqI2z" />
+          <ProcessDefinition Id="F2gxpSKr14bLGC4kY0cake" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ CreateUserCredential ************************
+
+-->
+      <Node Name="CreateUserCredential" Category="IO.gCal" Bounds="520,268" Id="ECAC59LD4qLLYbe2QcskFZ">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" Name="Process" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="TXdTlxr77UTOteNFd3a541">
+          <Canvas Id="D5Uhjqbr81iPfsuUusDobL">
+            <ControlPoint Id="Au0TezJnwGbLDQzkyLK9a6" Bounds="373,903" />
+            <ControlPoint Id="CPiB7P3vhOPMAeO2cliaIM" Bounds="266,156,20,20" />
+            <ControlPoint Id="VS0ORa5NvaXQSLg60aLOkP" Bounds="823,202" />
+            <Node Bounds="705,288,59,22" Id="MNe7KHhSOeqP6eLylieBpw">
+              <p:NodeReference LastCategoryFullName="IO.Path" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="IsDirectory" />
+              </p:NodeReference>
+              <Pin Id="ObHXncWyN31MGYStEak4OV" Name="Input" Kind="StateInputPin" />
+              <Pin Id="E6Gi19rsUhPPdUaY2I8BWx" Name="Is Directory" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="212,362,826,510" Id="OIm3lxqahaJOnj760cBEdr">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <Pin Id="OqNW5XFjsg8MV0kRT61eQF" Name="Condition" Kind="InputPin" />
+              <Patch Id="Kz3GUKgftHTQAjkkzUSPAr" ManuallySortedPins="true">
+                <Patch Id="VK4qUdIvnqVLWwmCI4VqrV" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="MOUR0HzWcwWLzckrxE6fwe" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="826,621,100,22" Id="Cb9pl1BrpTyNyBTYgP1fMZ">
+                  <p:NodeReference LastCategoryFullName="IO.gCal.FileDataStore" LastSymbolSource="VVVV.IO.gCal.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="gCal" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <CategoryReference Kind="ClassType" Name="FileDataStore" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="SrQkohiIBnPNPWt9kuVU8D" Name="Folder" Kind="InputPin" />
+                  <Pin Id="SGPOmqGQ7dxMMESAeBbMIW" Name="Full Path" Kind="InputPin" />
+                  <Pin Id="J3VH9eTGIuANR6mHPTYQde" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="824,568,65,13" Id="CnAlcqysUUnOLkDvqMvygM">
+                  <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="ToString" />
+                  </p:NodeReference>
+                  <Pin Id="UeIqz5f1JJHQBlPn8VsZAo" Name="Input" Kind="InputPin" />
+                  <Pin Id="MWaXq7OymsSPf5uc2CIK3W" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="340,747,613,13" Id="C5mGJ06pLc0NZQfVEEMyad">
+                  <p:NodeReference LastCategoryFullName="IO.gCal.GoogleWebAuthorizationBroker" LastSymbolSource="VVVV.IO.gCal.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="AuthorizeAsync" />
+                    <CategoryReference Kind="ClassType" Name="GoogleWebAuthorizationBroker" NeedsToBeDirectParent="true" />
+                    <PinReference Kind="InputPin" Name="Client Secrets" />
+                  </p:NodeReference>
+                  <Pin Id="JcUbFtp75SsLruNxW222B3" Name="Client Secrets" Kind="InputPin" />
+                  <Pin Id="FPB0iz4Jh7nLuSZ9Bgt4i9" Name="Scopes" Kind="InputPin" />
+                  <Pin Id="FeKRmdiyBN1OJsVFoVMuxM" Name="User" Kind="InputPin" />
+                  <Pin Id="NmXF3sbgYnNPPi4zqzOagk" Name="Task Cancellation Token" Kind="InputPin" />
+                  <Pin Id="L0jGfeO8ENKPlFrrf34hJV" Name="Data Store" Kind="InputPin" />
+                  <Pin Id="E4KR4mXBhTFPOdRtWdO6Y3" Name="Code Receiver" Kind="InputPin" />
+                  <Pin Id="LtEk6ddoU78QC8GssIqg8N" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="461,529,92,13" Id="IbiuGbmtwapMsv1hYEbRbR">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.CalendarService.Scope" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Scope" />
+                    <Choice Kind="OperationCallFlag" Name="CalendarReadonly" />
+                  </p:NodeReference>
+                  <Pin Id="TjY3q7xyFx6P6TcuHho4gh" Name="Calendar Readonly" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="461,642,65,13" Id="K5t2tObicHMNuAP714WL8L">
+                  <p:NodeReference LastCategoryFullName="Collections.Sequence" LastSymbolSource="VL.Collections.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="ToSequence" />
+                  </p:NodeReference>
+                  <Pin Id="UeIVfwVP9d4MMFDaIFQRZY" Name="Input" Kind="InputPin" />
+                  <Pin Id="KKhesmHIxliPUzfNKxgf3B" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pad Id="MpDXnR6nYijL2ntIKJZQ3T" Comment="User" Bounds="586,647,46,20" ShowValueBox="true" isIOBox="true" Value="&quot;user&quot;">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Node Bounds="705,640,33,13" Id="TzgUAIYld7yOUwWcBuI5I8">
+                  <p:NodeReference LastCategoryFullName="Reactive.CancellationToken" LastSymbolSource="VL.Reactive.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="CancellationToken" />
+                    <Choice Kind="OperationCallFlag" Name="None" />
+                  </p:NodeReference>
+                  <Pin Id="UFxqTWaCqIiPCavEdh4tMU" Name="None" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="265,485,65,95" Id="Dmzmh2uEW4nL7Xowjdw8BQ">
+                  <p:NodeReference LastCategoryFullName="Basics.Resources" LastSymbolSource="CoreLibBasics.vl">
+                    <CategoryReference Kind="Category" Name="Resources" />
+                    <Choice Kind="OperationCallFlag" Name="Using (Select)" />
+                    <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                  </p:NodeReference>
+                  <Pin Id="GNqsXydl9hvMHdwPupwDpO" Name="Input" Kind="InputPin" />
+                  <Pin Id="SUbIWxbcK9oO38Xy08wQV3" Name="Result" Kind="OutputPin" />
+                  <Patch Id="UKSFN8MBOtzNWNHU54uNlx" Name="Extractor" ManuallySortedPins="true">
+                    <Pin Id="IwgswnKbxnjOpAEsm0jEC9" Name="Arg" Kind="InputPin" />
+                    <Pin Id="OBNsBdqKXg1OuB6XnSMwqm" Name="Result" Kind="OutputPin" />
+                    <ControlPoint Id="IpJuDTkAcJOQEozBF3Xgzl" Bounds="278,491" />
+                    <ControlPoint Id="MHiBxvNct44PVX0YnVQjol" Bounds="278,571" />
+                    <Node Bounds="277,528,31,13" Id="NdUISJshnrmMHjnnxbLAR2">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleClientSecrets" LastSymbolSource="Google.Apis.Auth.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="GoogleClientSecrets" />
+                        <Choice Kind="OperationCallFlag" Name="Load" />
+                      </p:NodeReference>
+                      <Pin Id="MyUL9nL7WRYOUy82QfBB5s" Name="Stream" Kind="InputPin" />
+                      <Pin Id="PtpayRl2uvoNXp3a4f5TzO" Name="Result" Kind="OutputPin" />
+                    </Node>
+                  </Patch>
+                </Node>
+                <Node Bounds="265,635,81,22" Id="AXPcU97jf9OO1upHfjbLF6">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleClientSecrets" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="GoogleClientSecrets" />
+                    <Choice Kind="OperationCallFlag" Name="Secrets" />
+                  </p:NodeReference>
+                  <Pin Id="JFpidIyA750OyLU8a8JkAO" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="BITE4sy5h5ZMQByZl1iHOj" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="JLWNHmaVZB1M50jqEnBctf" Name="Secrets" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="265,444,65,13" Id="Eye7jmaE67SQWzv1NrJHeL">
+                  <p:NodeReference LastCategoryFullName="IO" LastSymbolSource="VL.CoreLib.IO.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Category" Name="IO" />
+                    <Choice Kind="ProcessAppFlag" Name="File" />
+                  </p:NodeReference>
+                  <Pin Id="FFiS2hcDwayLZF7lpCkP1L" Name="File Path" Kind="InputPin" />
+                  <Pin Id="LTK4qWPiKznMwXwXr1M1KL" Name="File Mode" Kind="InputPin" />
+                  <Pin Id="O1hfIjsn3TiLlhSwzmJrgb" Name="File Access" Kind="InputPin" />
+                  <Pin Id="KXeUQt1r0M8QVmIfSWL1Ho" Name="File Share" Kind="InputPin" />
+                  <Pin Id="NDNrmQqxsKbMuFFNSftXIT" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="339,795,37,22" Id="PmSa2by0ZiAO3PccH0fJSz">
+                  <p:NodeReference LastCategoryFullName="Reactive.Task" LastSymbolSource="VL.Reactive.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="ClassType" Name="Task" />
+                    <Choice Kind="OperationCallFlag" Name="Result" />
+                  </p:NodeReference>
+                  <Pin Id="LrU0qE2lxeOOIM2b6o1k6X" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DslgGj1vPhbLKKXFPIm3XI" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="Cq7gMg4mTCsLkPLXeGnD2f" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pad Id="R9MVKJrcdt2LayQDRecYVG" Comment="File Mode" Bounds="288,391,90,19" ShowValueBox="true" isIOBox="true" Value="&quot;Open&quot;">
+                  <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="FileMode" />
+                    <CategoryReference Kind="Category" Name="IO" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="HIvkyxMGPItQLk3yZnrrZR" Comment="File Access" Bounds="308,423,70,19" ShowValueBox="true" isIOBox="true" Value="&quot;Read&quot;">
+                  <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="FileAccess" />
+                    <CategoryReference Kind="Category" Name="IO" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Pad Id="AgtHfoxRxj7PEIePH6TYMn" Comment="Full Path" Bounds="925,581,40,19" ShowValueBox="true" isIOBox="true" Value="true">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                  </p:TypeAnnotation>
+                </Pad>
+              </Patch>
+              <ControlPoint Id="EX7321nZLhVL5NAX4caId5" Bounds="374,866" Alignment="Bottom" />
+              <ControlPoint Id="S03ud4DxXtZNbdT3TRCQsI" Bounds="377,427" Alignment="Top" />
+            </Node>
+            <Node Bounds="211,284,36,22" Id="DeINP6Y58feNZT7o7k1sPf">
+              <p:NodeReference LastCategoryFullName="IO.Path" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="Category" Name="Path" />
+                <Choice Kind="OperationCallFlag" Name="Exists" />
+              </p:NodeReference>
+              <Pin Id="HneflmEJQQpOGRVtTVelmA" Name="Input" Kind="StateInputPin" />
+              <Pin Id="CMixXOl9OySN7v8BG960Xm" Name="Exists" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="211,335,499,13" Id="TofhqciSKpgLotNAR4M1Id">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="AND" />
+              </p:NodeReference>
+              <Pin Id="ICfgsf733FaMDW4Ixu0Q3u" Name="Input" Kind="StateInputPin" />
+              <Pin Id="P6cbNVY1pXhO2etIu55kTk" Name="Input 2" Kind="InputPin" />
+              <Pin Id="VzRVFbIskh8Nr4Cexwnvnq" Name="Output" Kind="StateOutputPin" />
+            </Node>
+          </Canvas>
+          <Patch Id="If4xb6ezsJaOrAAYIYjun5" Name="Create" />
+          <Patch Id="EAVzjoiCJsmPw0c35R72kk" Name="Update">
+            <Pin Id="TuboksjIBP0OkfCqZxCU5A" Name="Client Secret Filepath" Kind="InputPin" Bounds="271,155" />
+            <Pin Id="N0Ruy4qPFOhOGFtrvRRMyT" Name="UserCredential" Kind="OutputPin" Bounds="370,777" />
+            <Pin Id="KBuEZyHOfTvOZwlyqxUbfZ" Name="User Credentials Filepath" Kind="InputPin" Bounds="833,333" />
+          </Patch>
+          <ProcessDefinition Id="G7l3AV0KFq8NNiqh9f99wV">
+            <Fragment Id="C8Ve5mZbtebLVCaH2JbNh8" Patch="If4xb6ezsJaOrAAYIYjun5" Enabled="true" />
+            <Fragment Id="HU5MH3ipl1ePi9ePGSonrL" Patch="EAVzjoiCJsmPw0c35R72kk" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="Aa9SI6x8hP1LgWjGgJU5fa" Ids="AgtHfoxRxj7PEIePH6TYMn,SGPOmqGQ7dxMMESAeBbMIW" />
+          <Link Id="QUnTkTSdMLRNb5ONWz05go" Ids="R9MVKJrcdt2LayQDRecYVG,LTK4qWPiKznMwXwXr1M1KL" />
+          <Link Id="ALsWSI2ETNOLDFhc2kyxMu" Ids="HIvkyxMGPItQLk3yZnrrZR,O1hfIjsn3TiLlhSwzmJrgb" />
+          <Link Id="F9qtpCjysnCNkltViEbC7m" Ids="Au0TezJnwGbLDQzkyLK9a6,N0Ruy4qPFOhOGFtrvRRMyT" IsHidden="true" />
+          <Link Id="REkZFxaWqQtNyBRW96fih8" Ids="TuboksjIBP0OkfCqZxCU5A,CPiB7P3vhOPMAeO2cliaIM" IsHidden="true" />
+          <Link Id="TcwqIvE7dyzNxGINO6QoX7" Ids="KBuEZyHOfTvOZwlyqxUbfZ,VS0ORa5NvaXQSLg60aLOkP" IsHidden="true" />
+          <Link Id="E8UAjBUQSXPLITZGnuoHGr" Ids="VS0ORa5NvaXQSLg60aLOkP,ObHXncWyN31MGYStEak4OV" />
+          <Link Id="EwgwNkTgGd2MDt3Yo6b78E" Ids="VS0ORa5NvaXQSLg60aLOkP,UeIqz5f1JJHQBlPn8VsZAo" />
+          <Link Id="SrUWl5crdmRO56PeNwhp6E" Ids="MWaXq7OymsSPf5uc2CIK3W,SrQkohiIBnPNPWt9kuVU8D" />
+          <Link Id="MOX2Gv5P9S6O36eD8pWG1F" Ids="S03ud4DxXtZNbdT3TRCQsI,EX7321nZLhVL5NAX4caId5" IsFeedback="true" />
+          <Link Id="Cl34mipkjdBN17YTgZIfke" Ids="TjY3q7xyFx6P6TcuHho4gh,UeIVfwVP9d4MMFDaIFQRZY" />
+          <Link Id="Mjc4qjq6EiQLjcH6V8U102" Ids="KKhesmHIxliPUzfNKxgf3B,FPB0iz4Jh7nLuSZ9Bgt4i9" />
+          <Link Id="F8wFGKGqpkaPpMKf6wIWJp" Ids="MpDXnR6nYijL2ntIKJZQ3T,FeKRmdiyBN1OJsVFoVMuxM" />
+          <Link Id="GT7D7RzFnCHOS5qn7sWeFl" Ids="UFxqTWaCqIiPCavEdh4tMU,NmXF3sbgYnNPPi4zqzOagk" />
+          <Link Id="IMfpWKiOtdiQQkbElbTqfc" Ids="IwgswnKbxnjOpAEsm0jEC9,IpJuDTkAcJOQEozBF3Xgzl" IsHidden="true" />
+          <Link Id="UYDzh3KIffRP93CjWZ0Rkf" Ids="MHiBxvNct44PVX0YnVQjol,OBNsBdqKXg1OuB6XnSMwqm" IsHidden="true" />
+          <Link Id="CDAPsNDWcziP8tyKRtQ7ed" Ids="IpJuDTkAcJOQEozBF3Xgzl,MyUL9nL7WRYOUy82QfBB5s" />
+          <Link Id="Hf9tYcqcnDqN6FIuxXi2W5" Ids="PtpayRl2uvoNXp3a4f5TzO,MHiBxvNct44PVX0YnVQjol" />
+          <Link Id="FDaVJ4PWVcmMxvwGBhgIKD" Ids="SUbIWxbcK9oO38Xy08wQV3,JFpidIyA750OyLU8a8JkAO" />
+          <Link Id="QB9KaapF3gALONt4BjKYTn" Ids="NDNrmQqxsKbMuFFNSftXIT,GNqsXydl9hvMHdwPupwDpO" />
+          <Link Id="HCGgP61UQs0QdvGAFgtUGE" Ids="JLWNHmaVZB1M50jqEnBctf,JcUbFtp75SsLruNxW222B3" />
+          <Link Id="SlpEyW0FHV2PCMS3JDPR74" Ids="LtEk6ddoU78QC8GssIqg8N,LrU0qE2lxeOOIM2b6o1k6X" />
+          <Link Id="CIMlkhVpSjjOC7RjS8o41u" Ids="J3VH9eTGIuANR6mHPTYQde,L0jGfeO8ENKPlFrrf34hJV" />
+          <Link Id="LlzqtnEx9VrNTYts1Shy1t" Ids="Cq7gMg4mTCsLkPLXeGnD2f,EX7321nZLhVL5NAX4caId5" />
+          <Link Id="O47G1y1VgltNi0bFKzmyEx" Ids="EX7321nZLhVL5NAX4caId5,Au0TezJnwGbLDQzkyLK9a6" />
+          <Link Id="NIMJNtmu1qzQMZuh07eURz" Ids="CMixXOl9OySN7v8BG960Xm,ICfgsf733FaMDW4Ixu0Q3u" />
+          <Link Id="MbZ06QL0YaQP1EmAG5aRJ7" Ids="E6Gi19rsUhPPdUaY2I8BWx,P6cbNVY1pXhO2etIu55kTk" />
+          <Link Id="DgMzvdfHnRuL7e9a3EhEKP" Ids="VzRVFbIskh8Nr4Cexwnvnq,OqNW5XFjsg8MV0kRT61eQF" />
+          <Link Id="JMV09PeffWvNQmGK7Nnn0h" Ids="CPiB7P3vhOPMAeO2cliaIM,HneflmEJQQpOGRVtTVelmA" />
+          <Link Id="BdgzXtv47fGMTTqxQTJ8JH" Ids="CPiB7P3vhOPMAeO2cliaIM,FFiS2hcDwayLZF7lpCkP1L" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ GoogleWebAuthorizationBroker ************************
+
+-->
+      <Node Name="GoogleWebAuthorizationBroker" Bounds="137,306" Id="U91XNQB5rCTNArDufJRlyb">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Google.Apis.Auth.OAuth2" LastSymbolSource="Google.Apis.Auth.dll">
+          <Choice Kind="TypeFlag" Name="GoogleWebAuthorizationBroker" />
+        </p:TypeAnnotation>
+        <Patch Id="IrS2kEYfT9rQCATBKoEqg8">
+          <Canvas Id="UCRTMom2rrDMpxBaTnFZOW" />
+          <ProcessDefinition Id="LAvzYCQOHFkQQWKqwn1mZj" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ GoogleCalendar_Test ************************
+
+-->
+      <Node Name="GoogleCalendar_Test" Category="VVVV.Google.Calendar" Bounds="140,479" Id="E8T06bMxny9NJ7kHy5XIUX">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" Name="Process" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="KijwLxIcLHiLZZokdb7w3e">
+          <Canvas Id="GEOEag7HYYjPGHFCQnQRmw">
+            <Pad Id="E7YV2KT6n8CP1xxu6EJCHf" Comment="Client Secret Filepath" Bounds="324,-72,209,19" ShowValueBox="true" isIOBox="true" Value="{&quot;_path&quot;:&quot;..\\client_secret.json&quot;}">
+              <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Path" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="FaWgkJ7eJfBNvaJwbrkj23" Comment="User Credentials Filepath" Bounds="444,12,232,19" ShowValueBox="true" isIOBox="true" Value="{&quot;_path&quot;:&quot;..\\calendarCredential\\calendarCredential&quot;}">
+              <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Path" />
+              </p:TypeAnnotation>
+            </Pad>
+            <Pad Id="Ki2hoNzlcUQNsUzogC3vzu" Comment="" Bounds="-31,33,44,20" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+            <Pad Id="DeEEmg1rxEMN9NgviPTTN2" Comment="" Bounds="145,437,40,20" ShowValueBox="true" isIOBox="true" Value="false">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Boolean" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:buttonmode p:Assembly="VL.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+              </p:ValueBoxSettings>
+            </Pad>
+            <ControlPoint Id="L6IIojAm1hGNbXrTQhwPST" Bounds="398,1669" />
+            <ControlPoint Id="UN7dINaS9zCQR4T7S3NSlS" Bounds="443,-27" />
+            <ControlPoint Id="IsuCeROADMTPcEOqSF7QGB" Bounds="322,-109" />
+            <ControlPoint Id="BgGyA6QlRrDP3R9m9Cn7YA" Bounds="323,1668" />
+            <ControlPoint Id="ALFNcd6O9mQMGcnKHNCQ65" Bounds="-32,5" />
+            <ControlPoint Id="Bu3imPJg32lNJ84gr0HrsM" Bounds="143,392,20,20" />
+            <ControlPoint Id="H203yfaIoEpNAbELEz0h9R" Bounds="409,277" />
+            <Node Bounds="311,1551,99,86" Id="EhVt1eaRqCONDQ7KCoCdEI">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="D0DhwLDJszyLfCjNJclvkg" Name="Break" Kind="OutputPin" />
+              <Patch Id="UCMQd9XGmDYQdXhXvmaV0j" ManuallySortedPins="true">
+                <Patch Id="DhzPHXrV7g4PGeHVvRVB2A" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="IC4WpQA5kmMOXOs0xFJxJo" Name="Update" ManuallySortedPins="true" />
+                <Patch Id="O8Yli1p9Hp9LpMmlifCVLp" Name="Dispose" ManuallySortedPins="true" />
+                <Node Bounds="325,1576,63,22" Id="HYlc7BInPp1MKwkF6ICcPU">
+                  <p:NodeReference LastCategoryFullName="Primitive.Tuple (2 Items)" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="RecordType" Name="Tuple (2 Items)" />
+                    <Choice Kind="OperationCallFlag" Name="Split" />
+                  </p:NodeReference>
+                  <Pin Id="NGooNEug1DbPFqZQe1nLja" Name="Input" Kind="InputPin" />
+                  <Pin Id="MXXQOhJtzk0LVhGZCqU8i9" Name="Item 1" Kind="OutputPin" />
+                  <Pin Id="A6PCutAkOJdNeHK99sFfJC" Name="Item 2" Kind="OutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="SicHNm35C4HPZq3EvshGkH" Bounds="326,1557" Alignment="Top" />
+              <ControlPoint Id="IHurVYqHz7JMqqLEmZR556" Bounds="327,1631" Alignment="Bottom" />
+              <ControlPoint Id="UJRiYUgXCvbQWL27oNNFSJ" Bounds="384,1631" Alignment="Bottom" />
+            </Node>
+            <Node Bounds="223,516,485,958" Id="M6p5vNHVmmOMAZom3Si84c">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <Pin Id="VJ2JetfFFdJOooNdeVkOZM" Name="Condition" Kind="InputPin" />
+              <Patch Id="Oqad3h9JOzMOpbvUjzX3xd" ManuallySortedPins="true">
+                <Patch Id="Gy2KRieagXrNQRfnoRooaP" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="P6osgBmph41PzpGxKX3s4V" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="322,1041,195,383" Id="SFmVCmbczFxNjEdUBGJaC0">
+                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                    <Choice Kind="ProcessAppFlag" Name="GetEventDetails" />
+                    <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                  </p:NodeReference>
+                  <Patch Id="Ooq7NpRbokcNrL6vdtbTHI" Name="EventDelegate" ManuallySortedPins="true">
+                    <Pin Id="L2FIvHrXis7O44EW8s6V5U" Name="Arg" Kind="InputPin" />
+                    <Pin Id="InxObiIGm9cMkGM16gtBMj" Name="Result" Kind="OutputPin" />
+                    <ControlPoint Id="MPOjIooh97LNYiFuWLmBau" Bounds="336,1047" />
+                    <ControlPoint Id="GexZDScaUMkNXotsnmXmtt" Bounds="399,1415" />
+                    <Node Bounds="338,1185,63,22" Id="S7mgfIqeMn0QBfceIpFilH">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.EventDateTime" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="EventDateTime" />
+                        <Choice Kind="OperationCallFlag" Name="Date" />
+                      </p:NodeReference>
+                      <Pin Id="V1mk3cF9vL6OafIE7fg8XT" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="MMo4vLtho3mPNa0AeWH1KE" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="Re6E6EBRSOQPSkC9X3zS6J" Name="Date" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="338,1236,63,22" Id="MbS8AET57e0MRSMvSCvFoP">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.EventDateTime" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="EventDateTime" />
+                        <Choice Kind="OperationCallFlag" Name="DateTime" />
+                      </p:NodeReference>
+                      <Pin Id="JeU3QqhQhlFLKxc2ftmIss" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="G1XQtLSrfRFMmlb36nv7Lf" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="LDgkgQjKc1cMxzYEUrarXQ" Name="Date Time" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="396,1315,65,13" Id="SXGQmCOLo9XQG2DXYsgiRp">
+                      <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="ToString" />
+                      </p:NodeReference>
+                      <Pin Id="Vae0euFwBLMOiRqsq89YCJ" Name="Input" Kind="InputPin" />
+                      <Pin Id="RjMkhANuR3YOEkHwLXcSwh" Name="Result" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="396,1280,41,13" Id="HJSthwcuLxoPhPr4qp5KTS">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="CastAs" />
+                      </p:NodeReference>
+                      <Pin Id="AOEUvsr74qgMtPpRwUGGuM" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="COrI9YTV30INFrVTcZGdFB" Name="Default" Kind="InputPin" />
+                      <Pin Id="IIKXHeNwmowOSk1f8RiDRC" Name="Result" Kind="OutputPin" />
+                      <Pin Id="Tcx0kLWPCDBMt1W3ag0zfb" Name="Success" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="432,1240,43,22" Id="P3tURMd7Q7BMO5aBZ8N6E5">
+                      <p:NodeReference LastCategoryFullName="System.DateTime" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="RecordType" Name="DateTime" />
+                        <Choice Kind="OperationCallFlag" Name="Create" />
+                      </p:NodeReference>
+                      <Pin Id="UpbSPS0ApxCPZYSB0Yc6Ed" Name="Ticks" Kind="InputPin" />
+                      <Pin Id="GVXxnpDsN2XPPC59tZbMrG" Name="Kind" Kind="InputPin" />
+                      <Pin Id="EGQp9Ph9ZkpNoYvpWicSdg" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="335,1145,62,22" Id="ODLn4yWrPwgL4piqT5ZVcj">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.Event" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="Event" />
+                        <Choice Kind="OperationCallFlag" Name="Start" />
+                      </p:NodeReference>
+                      <Pin Id="Dl2LOLoHAWJOixy53YeM2o" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="DQZmwpE9vzBMNPtY2GHnxd" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="G0pjkQ7rH3GNjjgBlEpEca" Name="Start" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="334,1076,169,22" Id="Q6apQV77gZJOBt5Qbkd1vX">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.Event" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="Event" />
+                        <Choice Kind="OperationCallFlag" Name="Summary" />
+                      </p:NodeReference>
+                      <Pin Id="HzrvqUe4RJ7Ms3Dep9XWog" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="L2xtfBxRxDgLiPJIdDDCrS" Name="Output" Kind="StateOutputPin" />
+                      <Pin Id="VgXcHSk2ZYHN3uRlm4ASTw" Name="Summary" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="396,1357,109,22" Id="K8BgDzZXu3MPIlKJyyGkz4">
+                      <p:NodeReference LastCategoryFullName="Primitive.Tuple (2 Items)" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="RecordType" Name="Tuple (2 Items)" />
+                        <Choice Kind="OperationCallFlag" Name="Join" />
+                      </p:NodeReference>
+                      <Pin Id="IU1U1NwVAVzMEtHd2tfLXe" Name="Item 1" Kind="InputPin" />
+                      <Pin Id="LOeESiHZTQ4LQaLYlddcLc" Name="Item 2" Kind="InputPin" />
+                      <Pin Id="HmXLnp9KPOCO46qCyR4lAe" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                  </Patch>
+                  <Pin Id="Lv4O3R80qkkPs76wtJzfld" Name="ListRequest" Kind="InputPin" />
+                  <Pin Id="EzYGo9D0W98OTYB1anobSF" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="322,565,256,442" Id="KhCLb0nRhM1N2ZaFGwS3S9">
+                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                    <Choice Kind="ProcessAppFlag" Name="SetupListRequest" />
+                    <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
+                  </p:NodeReference>
+                  <Patch Id="J5Mrt0UHZ8UP3s25NQz4kN" Name="FilterDelegate" ManuallySortedPins="true">
+                    <Pin Id="IbAW3hD9K2cLojl7VuhRHi" Name="Arg" Kind="InputPin" />
+                    <Pin Id="EVQaQLYT89JN3JHDtDy5V5" Name="Result" Kind="OutputPin" />
+                    <ControlPoint Id="OiYqMMccyZPPVVRbHgBu4Z" Bounds="334,573" />
+                    <ControlPoint Id="LZTm6lAN8s2Ldc7izXHjWM" Bounds="336,998" />
+                    <Node Bounds="334,642,63,22" Id="MOdXl3Upcc0NAJxQX22OlX">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                        <Choice Kind="OperationCallFlag" Name="SetTimeMin" />
+                      </p:NodeReference>
+                      <Pin Id="VFmNAwrGIEuONIErCtGXW3" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="CVnsnAHJIymMhWWveZn37s" Name="Value" Kind="InputPin" />
+                      <Pin Id="BWjwfpVTjOGNi9z8gdznWe" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="433,588,29,13" Id="R9UWypcHmXuNF4FXkK2hNA">
+                      <p:NodeReference LastCategoryFullName="System.DateTime" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="Now" />
+                        <CategoryReference Kind="RecordType" Name="DateTime" NeedsToBeDirectParent="true" />
+                      </p:NodeReference>
+                      <Pin Id="BhmB7u5bcTJMVyCZvO5w4M" Name="Now" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="433,615,41,13" Id="AqqumiWABfbOBgJ574VXdr">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="CastAs" />
+                      </p:NodeReference>
+                      <Pin Id="COXZ4lQfZYzLyj9hRinRnV" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="IdszBMglBRHNvhzEMkP5j2" Name="Default" Kind="InputPin" />
+                      <Pin Id="KYz0bz11wOdNadFCjTVS2J" Name="Result" Kind="OutputPin" />
+                      <Pin Id="UWo6zqC0yzjP0LjVWjcznJ" Name="Success" Kind="OutputPin" />
+                    </Node>
+                    <Node Bounds="334,703,83,22" Id="GG1UN0jlxDGNUJ0KDGCcYx">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                        <Choice Kind="OperationCallFlag" Name="SetShowDeleted" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                          <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                        </CategoryReference>
+                      </p:NodeReference>
+                      <Pin Id="J5uXnZRzfuTMSsyCH1qRoq" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="LkSyYCKVAvvL7mzu80qbzx" Name="Value" Kind="InputPin" />
+                      <Pin Id="KiGFhI7ZbqJOWj9yU1ELmu" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="433,676,41,13" Id="DYUGyxGDlAELV4tWOiZnyn">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="CastAs" />
+                      </p:NodeReference>
+                      <Pin Id="NcVsHLqFTAnPNr81cWLyHq" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="RS5YvBwKivMMZForR7Lrl1" Name="Default" Kind="InputPin" />
+                      <Pin Id="DsjZflwJEkvLkiwQc8P2DC" Name="Result" Kind="OutputPin" />
+                      <Pin Id="FNjUN9mPQrYO2kZhO8ByKv" Name="Success" Kind="OutputPin" />
+                    </Node>
+                    <Pad Id="I4SnRq6YhN8MXLdB3DT3ci" Comment="" Bounds="435,652,40,19" ShowValueBox="true" isIOBox="true" Value="false">
+                      <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="TypeFlag" Name="Boolean" />
+                        <FullNameCategoryReference ID="Primitive" />
+                      </p:TypeAnnotation>
+                      <p:ValueBoxSettings />
+                    </Pad>
+                    <Node Bounds="334,772,83,22" Id="RwJvR0shXg7NW3R0811R5R">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                          <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                        </CategoryReference>
+                        <Choice Kind="OperationCallFlag" Name="SetSingleEvents" />
+                      </p:NodeReference>
+                      <Pin Id="E8vTIah38TsNqYrZTcHctG" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="T25q0h7CvZANyUasY4P21k" Name="Value" Kind="InputPin" />
+                      <Pin Id="FvQcJvzLV8wODmYKlWCZ8C" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="433,744,41,13" Id="Lvt5wgg0xGsMBXFr1yqa43">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="CastAs" />
+                      </p:NodeReference>
+                      <Pin Id="KiAxNV7DNmkN0uFK3yIfcb" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="QNx537yjyOyQEM5LhLkg8t" Name="Default" Kind="InputPin" />
+                      <Pin Id="OQU9gzQaT8jNWggfqyx9Rs" Name="Result" Kind="OutputPin" />
+                      <Pin Id="F5Dp6g0FVYRLqLyRHbj3hy" Name="Success" Kind="OutputPin" />
+                    </Node>
+                    <Pad Id="RxxhanbAINzO1S5ziTsLlm" Comment="" Bounds="435,720,40,19" ShowValueBox="true" isIOBox="true" Value="true">
+                      <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="TypeFlag" Name="Boolean" />
+                        <FullNameCategoryReference ID="Primitive" />
+                      </p:TypeAnnotation>
+                      <p:ValueBoxSettings />
+                    </Pad>
+                    <Node Bounds="334,936,83,22" Id="BsrYhK04fNlOIBjflNOy57">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                          <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                        </CategoryReference>
+                        <Choice Kind="OperationCallFlag" Name="SetMaxResults" />
+                      </p:NodeReference>
+                      <Pin Id="GLIGcUunpWoMJWJF7nQ4ty" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="Fx1WVKZIZO0PTVPS7xtwev" Name="Value" Kind="InputPin" />
+                      <Pin Id="UPse4FvyIWUQZMA4EuO5XX" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="433,908,41,13" Id="AV6A7enDwuGMU3lgu306MX">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="CastAs" />
+                      </p:NodeReference>
+                      <Pin Id="TfNvu2ItKLbNz48mppiyiu" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="DJSCbI7G8U4NRBKaYw79HV" Name="Default" Kind="InputPin" />
+                      <Pin Id="Dpfx85fqmwSLXbK89gt3Fc" Name="Result" Kind="OutputPin" />
+                      <Pin Id="CGJF7sERUGIPeZApWUhV8Z" Name="Success" Kind="OutputPin" />
+                    </Node>
+                    <Pad Id="CqwQabtdB2jOY3GDE9BGHa" Comment="MaxResults" Bounds="436,882,24,19" ShowValueBox="true" isIOBox="true" Value="13">
+                      <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="TypeFlag" Name="Integer32" />
+                        <FullNameCategoryReference ID="Primitive" />
+                      </p:TypeAnnotation>
+                      <p:ValueBoxSettings />
+                    </Pad>
+                    <Node Bounds="334,843,60,22" Id="EO6VTjcUn0QLYSQkDQzmxC">
+                      <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                        <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                          <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                        </CategoryReference>
+                        <Choice Kind="OperationCallFlag" Name="SetOrderBy" />
+                      </p:NodeReference>
+                      <Pin Id="TUnlG7gqLwwPUAJYtWfAG8" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="DGha3d4UakvQEEipIwTn0F" Name="Value" Kind="InputPin" />
+                      <Pin Id="UWHXUsMEcZnMCvFG4NjGBg" Name="Output" Kind="StateOutputPin" />
+                    </Node>
+                    <Node Bounds="433,815,41,13" Id="RBw89fYlp5YMQ1WhINrA4w">
+                      <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="CastAs" />
+                      </p:NodeReference>
+                      <Pin Id="SI0ZL9yTqKMLvlzRZOt3b0" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="EShdKYNsup5MwasWPKv52h" Name="Default" Kind="InputPin" />
+                      <Pin Id="BS08JPSRR59Pvr8y1XEypn" Name="Result" Kind="OutputPin" />
+                      <Pin Id="Cgx6CHn1yQ1M5ktq0raOVq" Name="Success" Kind="OutputPin" />
+                    </Node>
+                    <Pad Id="LvV9Or3uCfXMQachvgMwFj" Comment="order" Bounds="435,788,86,20" ShowValueBox="true" isIOBox="true" Value="&quot;StartTime&quot;">
+                      <p:TypeAnnotation LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                        <Choice Kind="TypeFlag" Name="OrderByEnum" />
+                      </p:TypeAnnotation>
+                    </Pad>
+                  </Patch>
+                  <Pin Id="C9jQUEawRSILrPghzbSUfF" Name="Input" Kind="InputPin" />
+                  <Pin Id="CmkuQgOKoEmOZUvJVlGGAV" Name="Calendar Id" Kind="InputPin" />
+                  <Pin Id="DR7HxdhWx1yPwPIBhFwWLO" Name="ListRequest" Kind="OutputPin" />
+                </Node>
+                <Pad Id="PW3TQs3TgtPNuL8Xeicp3c" Comment="Calendar Id" Bounds="576,546,47,19" ShowValueBox="true" isIOBox="true" Value="&quot;primary&quot;">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pad>
+              </Patch>
+              <ControlPoint Id="OnEogCY8k3MQWsVjKcIyyC" Bounds="326,1468" Alignment="Bottom" />
+              <ControlPoint Id="DFOiWEQ35lgMvYcnCklFP5" Bounds="247,526" Alignment="Top" />
+            </Node>
+            <Pad Id="K2dVAVnstfkNemkgQUhPIk" SlotId="A7VkpZhMKBKPivcEp6iygh" Bounds="328,1505" />
+            <Pad Id="My1WkBwxoNmLGt87DLhnLk" SlotId="A7VkpZhMKBKPivcEp6iygh" Bounds="247,489" />
+            <!--
+
+    ************************ GetExpiration ************************
+
+-->
+            <Node Name="GetExpiration" Bounds="600,95,248,229" Id="RhPEVq2XOzKPwSaNw2XY0c">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Patch Id="JuwlqPcWyFfMVATdyO0I7A">
+                <Node Bounds="613,155,62,22" Id="SYiKKsgy3czMhu2krZYSJK">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.UserCredential" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="UserCredential" />
+                    <Choice Kind="OperationCallFlag" Name="Token" />
+                  </p:NodeReference>
+                  <Pin Id="Kf6NrZEL2vFLwCsreVlUCY" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="NvSmPtyZObPQNeQtoZ3oTr" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="CPorpMkr0iRNj3untMtOwy" Name="Token" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="670,196,90,22" Id="QMWK18ciF83PBJVznAR2ae">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.Responses.TokenResponse" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="TokenResponse" />
+                    <Choice Kind="OperationCallFlag" Name="ExpiresInSeconds" />
+                  </p:NodeReference>
+                  <Pin Id="RUqFChzY3t2MkB5Lmqqmkq" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MeN2MLPEKf0MG93e2C8c0E" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="Uf8lqKiaf4sMydUFPQ59Ik" Name="Expires In Seconds" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="755,250,41,13" Id="KSJ9ysojXY6MmLn7A3hE0f">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="CastAs" />
+                  </p:NodeReference>
+                  <Pin Id="B6JWQ4xW0ZNPDKKTpaHCmv" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DXVZE3a0OahOHjxvZW6xtJ" Name="Default" Kind="InputPin" />
+                  <Pin Id="FKSg2eIrnLVPUCK5oMlhrn" Name="Result" Kind="OutputPin" />
+                  <Pin Id="N2lGkIWiB9yMZBI6iCpbBP" Name="Success" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="791,205,45,22" Id="GkRadvhb8oIOB3HvDapXsp">
+                  <p:NodeReference LastCategoryFullName="Primitive.Integer64" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="Int64Type" Name="Integer64" />
+                    <Choice Kind="OperationCallFlag" Name="ToInt64" />
+                  </p:NodeReference>
+                  <Pin Id="DaUFABqEO2jOCH5G7GEd0R" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MWRfkbAYVGhQI2m8ZtWT9y" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Link Id="EvZe7ZtpN5aPUD4ejhClgp" Ids="CPorpMkr0iRNj3untMtOwy,RUqFChzY3t2MkB5Lmqqmkq" />
+                <Link Id="Re7CqupVUqeOOfhHGO07uN" Ids="Uf8lqKiaf4sMydUFPQ59Ik,B6JWQ4xW0ZNPDKKTpaHCmv" />
+                <Link Id="HIu5UxWz8hxQKnvsAOcCBc" Ids="MWRfkbAYVGhQI2m8ZtWT9y,DXVZE3a0OahOHjxvZW6xtJ" />
+                <ControlPoint Id="MVh4HH0CDl6QAI40xRgrvO" Bounds="614,111" />
+                <Link Id="N2ZYTScVotnLqmm8hWJE8H" Ids="MVh4HH0CDl6QAI40xRgrvO,Kf6NrZEL2vFLwCsreVlUCY" />
+                <Link Id="IpK9Vr4tsp1LYRrHg1No5s" Ids="Soriunb5W7kMaG5U1UNuQb,MVh4HH0CDl6QAI40xRgrvO" IsHidden="true" />
+                <ControlPoint Id="Oklmwzg2vKrOpjTd4dBpKx" Bounds="759,305" />
+                <Link Id="McbKPab7AYjOoTGOC0MhVw" Ids="FKSg2eIrnLVPUCK5oMlhrn,Oklmwzg2vKrOpjTd4dBpKx" />
+                <Link Id="GjQNOclojE3LUsLLHtJWla" Ids="Oklmwzg2vKrOpjTd4dBpKx,PADptZC5I2gLIpXIgIOq5v" IsHidden="true" />
+                <ControlPoint Id="BoQPtRIdrWQM6H5PevoGCJ" Bounds="616,212" />
+                <Link Id="MprrZztdZCdMseWgoCvk4e" Ids="NvSmPtyZObPQNeQtoZ3oTr,BoQPtRIdrWQM6H5PevoGCJ" />
+                <Link Id="SFrmq4WvXOkNAhbXkneAag" Ids="BoQPtRIdrWQM6H5PevoGCJ,VWwvGKOrLcNPOlGC7dLCzf" IsHidden="true" />
+                <Pin Id="Soriunb5W7kMaG5U1UNuQb" Name="Input" Kind="InputPin" Bounds="758,231" />
+                <Pin Id="VWwvGKOrLcNPOlGC7dLCzf" Name="Output" Kind="OutputPin" Bounds="761,386" />
+                <Pin Id="PADptZC5I2gLIpXIgIOq5v" Name="Result" Kind="OutputPin" Bounds="899,362" />
+              </Patch>
+            </Node>
+            <ControlPoint Id="Tgh1A6VdSaJNKXILxqAIAc" Bounds="774,754" />
+            <Node Bounds="-34,51,503,199" Id="GVp28Q4wkbvP7yxBR4nd4D">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <Pin Id="SviPQF2hoeuLvyDpUusfeB" Name="Force" Kind="InputPin" />
+              <Pin Id="RBzYTV3hYaSPyuca0KtPXO" Name="Has Changed" Kind="OutputPin" />
+              <Patch Id="RX9q0QapzpxNrgdp5NJj5A" ManuallySortedPins="true">
+                <Patch Id="C0P9RE22FmMPycEPWbreYl" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="MNlnVhxnnE7OiugeYS3was" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="323,74,124,13" Id="PEL2ErpIoLTQYRhHPTZaLc">
+                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessNode" Name="CreateUserCredential" />
+                  </p:NodeReference>
+                  <Pin Id="TP6gKoxme7oL7QW6sMUR7J" Name="Client Secret Filepath" Kind="InputPin" />
+                  <Pin Id="NvjnHHL9d8fQAt9PT8Gbw9" Name="User Credentials Filepath" Kind="InputPin" />
+                  <Pin Id="GE9r3pYtuNvOpRhChOAuuS" Name="UserCredential" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="154,158,174,20" Id="RTisI62hgCyPELKERj0lEG">
+                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="ProcessNode" Name="Initialize" />
+                  </p:NodeReference>
+                  <Pin Id="Qad8rF97snHLEQQtW7xgGj" Name="ApplicationName" Kind="InputPin" />
+                  <Pin Id="HVvsYt78fjcLoumklaXvo5" Name="Credentials" Kind="InputPin" />
+                  <Pin Id="DmnOE3g6bW5ONRvNvbuRQa" Name="Calendar List" Kind="OutputPin" />
+                  <Pin Id="F82R45nHATaLGVS9BXHLzU" Name="EventsRessource" Kind="OutputPin" />
+                </Node>
+                <Pad Id="SBFarPSOF4NLX3JVh8kDXZ" Comment="" Bounds="157,125,101,20" ShowValueBox="true" isIOBox="true" Value="&quot;MyAppName&quot;">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="String" />
+                  </p:TypeAnnotation>
+                </Pad>
+                <Node Bounds="323,116,89,13" Id="Tqqt6HNOXWYPLbNKyGZdpK">
+                  <p:NodeReference LastCategoryFullName="VVVV.Google.Calendar.GoogleCalendar_Test" LastSymbolSource="VL.Google.Calendar.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="GetExpiration" />
+                  </p:NodeReference>
+                  <Pin Id="LeOa1pt8TD2Mbs35SmxeoZ" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="GloEZNcODmZPCniSH0q49p" Name="Output" Kind="OutputPin" />
+                  <Pin Id="FwhmgNSIafXN1uvPw54VnP" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="-22,196,88,13" Id="Khk7XfjnqRuNXLp0oNXW3r">
+                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                    <Choice Kind="ProcessAppFlag" Name="ListCalendars" />
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  </p:NodeReference>
+                  <Pin Id="UHup5vy4cv4P5QkUeiDzCv" Name="CalendarList" Kind="InputPin" />
+                  <Pin Id="Ajl4P11XwgLOpFxDd9hvXk" Name="Ids" Kind="OutputPin" />
+                  <Pin Id="Qw2AwgZOJxtQBTCmTHKhFh" Name="Acces Roles" Kind="OutputPin" />
+                  <Pin Id="UoDq4a7ULFOOCX4DpUkHil" Name="Name" Kind="OutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="CjPIUUypDtAMg0IUPRb3kz" Bounds="327,57" Alignment="Top" />
+              <ControlPoint Id="Q5aVmA9iUhyQQU1sdhghir" Bounds="446,57" Alignment="Top" />
+              <ControlPoint Id="MqLNIpRuegRQbzYoL6FasH" Bounds="411,244" Alignment="Bottom" />
+              <ControlPoint Id="URBWCWr0etWM6HS75XsSyd" Bounds="325,244" Alignment="Bottom" />
+              <ControlPoint Id="DM8BlWQY7t9LviEPo4Vp99" Bounds="24,244" Alignment="Bottom" />
+              <ControlPoint Id="AVOPjnWeIaKO5ml42cMFwl" Bounds="-19,244" Alignment="Bottom" />
+              <ControlPoint Id="Shr6zIwmrUzQZNizKIsnQr" Bounds="107,244" Alignment="Bottom" />
+            </Node>
+            <ControlPoint Id="HoT0Uych1ILLHppjRLC8ls" Bounds="-22,277" />
+            <ControlPoint Id="Gcm1mphvheJLNbFoUhB4sV" Bounds="22,277" />
+            <ControlPoint Id="FOC3BfCeEp7Mih7T4TtMd0" Bounds="105,277" />
+            <Pad Id="H4MFe20rM1TP2ZWlgm3lYv" SlotId="EgY0qXaGGQ9NWksdC0LyM3" Bounds="324,333">
+              <p:ValueBoxSettings />
+            </Pad>
+            <Node Bounds="122,475" Id="Mg0v7SLUebvNfoMoGuHJGj">
+              <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="OR" />
+              </p:NodeReference>
+              <Pin Id="UmJzhFbOaOiNj563LSovX5" Name="Input" Kind="StateInputPin" />
+              <Pin Id="MIca5L65o1hNa8wtQfDr8W" Name="Input 2" Kind="InputPin" />
+              <Pin Id="I0eglhIYbxZOtDleWVdGXI" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <ControlPoint Id="OLhgszwRe4sPi7xoQYTLtn" Bounds="-29,404" />
+          </Canvas>
+          <Patch Id="CiYAvGPHgdLN4tKiJBpzNN" Name="Create" />
+          <Patch Id="DmYZklTTEC8Nes5QiE4lNG" Name="Update" ManuallySortedPins="true">
+            <Pin Id="QiPHSmSXKvVObKgXjo8M3R" Name="ClientSecret FilePath" Kind="InputPin" Bounds="481,94" />
+            <Pin Id="AxjEZVFPkFHNvqtCX52dAA" Name="Credential Directory" Kind="InputPin" Bounds="551,138" />
+            <Pin Id="QrItlK8n0BwOwbs51X5l2l" Name="init" Kind="InputPin" Bounds="269,116" />
+            <Pin Id="BNR7XgpcagrQUFISYURHDw" Name="Get Events" Kind="InputPin" Bounds="343,1034" />
+            <Pin Id="OCjNude9KLeOeJ0N9b1gBP" Name="MaxResults" Kind="InputPin" Bounds="722,989" />
+            <Pin Id="Vi9P5BZSKSlPhuvqt8Nayx" Name="starts" Kind="OutputPin" Bounds="547,1584" />
+            <Pin Id="KFcLfD0FJJEMOguAC4VKAl" Name="descriptions" Kind="OutputPin" Bounds="708,1658" />
+            <Pin Id="Lx6iqmGUUe6PDo27AF8Xkd" Name="Expires in Seconds" Kind="OutputPin" Bounds="1413,1843" />
+            <Pin Id="EBjrDvvODBkPbs5g5kOOvQ" Name="IDs" Kind="OutputPin" Bounds="-19,280" />
+            <Pin Id="N6jrRhHNtkuPhW44v7nE1t" Name="Access Roles" Kind="OutputPin" Bounds="24,280" />
+            <Pin Id="Ln5nZT3b9mkQFIQXZ6PcVS" Name="Names" Kind="OutputPin" Bounds="105,276" />
+          </Patch>
+          <ProcessDefinition Id="FECG3DkdeMqPA5JpDWX923">
+            <Fragment Id="MxLOXthTkIzLi6TUE1jWMT" Patch="CiYAvGPHgdLN4tKiJBpzNN" Enabled="true" />
+            <Fragment Id="ImlgAjZNEOJQYri868Dj63" Patch="DmYZklTTEC8Nes5QiE4lNG" Enabled="true" />
+            <Fragment Id="BDBMScOk5PILkDfbXXuelo" Patch="RhPEVq2XOzKPwSaNw2XY0c" />
+          </ProcessDefinition>
+          <Link Id="GOXvq2hY2YWPGQMcoU69iH" Ids="L6IIojAm1hGNbXrTQhwPST,KFcLfD0FJJEMOguAC4VKAl" IsHidden="true" />
+          <Link Id="OLcEyD3J02XPin8etrBF93" Ids="UN7dINaS9zCQR4T7S3NSlS,FaWgkJ7eJfBNvaJwbrkj23" />
+          <Link Id="PnNAajJrylvLBuZwcw9ymd" Ids="AxjEZVFPkFHNvqtCX52dAA,UN7dINaS9zCQR4T7S3NSlS" IsHidden="true" />
+          <Link Id="T16XdiDijItP4aRTvyPuv4" Ids="IsuCeROADMTPcEOqSF7QGB,E7YV2KT6n8CP1xxu6EJCHf" />
+          <Link Id="D0fOBC9LoyUNMjC2e5Mn6w" Ids="QiPHSmSXKvVObKgXjo8M3R,IsuCeROADMTPcEOqSF7QGB" IsHidden="true" />
+          <Link Id="L19JMQufAgiMY7I8EcLs1G" Ids="BgGyA6QlRrDP3R9m9Cn7YA,Vi9P5BZSKSlPhuvqt8Nayx" IsHidden="true" />
+          <Link Id="Tcstfq7cVNCPapshqnTN3m" Ids="ALFNcd6O9mQMGcnKHNCQ65,Ki2hoNzlcUQNsUzogC3vzu" />
+          <Link Id="Bh66yfZipnQOKyS0SQqwpS" Ids="QrItlK8n0BwOwbs51X5l2l,ALFNcd6O9mQMGcnKHNCQ65" IsHidden="true" />
+          <Link Id="MCTuVzWCaXhLaOccwMaPzu" Ids="Bu3imPJg32lNJ84gr0HrsM,DeEEmg1rxEMN9NgviPTTN2" />
+          <Link Id="N5osFGRfWibPOHIhrxZHZO" Ids="BNR7XgpcagrQUFISYURHDw,Bu3imPJg32lNJ84gr0HrsM" IsHidden="true" />
+          <Link Id="PH3pRYnBg4TQXN3bOv4PDS" Ids="H203yfaIoEpNAbELEz0h9R,Lx6iqmGUUe6PDo27AF8Xkd" IsHidden="true" />
+          <Link Id="V0vskjLaIfnNveoJ0KwleC" Ids="SicHNm35C4HPZq3EvshGkH,NGooNEug1DbPFqZQe1nLja" />
+          <Link Id="KnLPwSSoCpxOH7QpHg38Sb" Ids="MXXQOhJtzk0LVhGZCqU8i9,IHurVYqHz7JMqqLEmZR556" />
+          <Link Id="T4qczti5upoMwWqgjThLg3" Ids="A6PCutAkOJdNeHK99sFfJC,UJRiYUgXCvbQWL27oNNFSJ" />
+          <Link Id="KrZhdGpGtVYPlnUXLjDGrh" Ids="L2FIvHrXis7O44EW8s6V5U,MPOjIooh97LNYiFuWLmBau" IsHidden="true" />
+          <Link Id="SDjyBKfvjqSMcuVT5oHrNW" Ids="GexZDScaUMkNXotsnmXmtt,InxObiIGm9cMkGM16gtBMj" IsHidden="true" />
+          <Link Id="TVflYPu09KKN7zD5OTus7r" Ids="MMo4vLtho3mPNa0AeWH1KE,JeU3QqhQhlFLKxc2ftmIss" />
+          <Link Id="SNC9icmK8PsPZhHGN845TZ" Ids="LDgkgQjKc1cMxzYEUrarXQ,AOEUvsr74qgMtPpRwUGGuM" />
+          <Link Id="S51H6N4wyM8LHIO9rMjhuQ" Ids="IIKXHeNwmowOSk1f8RiDRC,Vae0euFwBLMOiRqsq89YCJ" />
+          <Link Id="AOpq3JWjFFdPdqOFJic3Jk" Ids="EGQp9Ph9ZkpNoYvpWicSdg,COrI9YTV30INFrVTcZGdFB" />
+          <Link Id="I2Vib5Jl3SJOS0sttBJmYd" Ids="G0pjkQ7rH3GNjjgBlEpEca,V1mk3cF9vL6OafIE7fg8XT" />
+          <Link Id="HeIDCJ5rhGzODUZ4qgFqWS" Ids="MPOjIooh97LNYiFuWLmBau,HzrvqUe4RJ7Ms3Dep9XWog" />
+          <Link Id="BekhUEnWepfO5EcZeqOnPe" Ids="L2xtfBxRxDgLiPJIdDDCrS,Dl2LOLoHAWJOixy53YeM2o" />
+          <Link Id="PqSvyuQPAvkQApNUxAQN7J" Ids="RjMkhANuR3YOEkHwLXcSwh,IU1U1NwVAVzMEtHd2tfLXe" />
+          <Link Id="KxojJTMIOVfO107pMzcxWc" Ids="VgXcHSk2ZYHN3uRlm4ASTw,LOeESiHZTQ4LQaLYlddcLc" />
+          <Link Id="NZ4fe3WV336Peuczv5uaP5" Ids="HmXLnp9KPOCO46qCyR4lAe,GexZDScaUMkNXotsnmXmtt" />
+          <Link Id="NhyXLJE8aq1NDLdTMQCmZt" Ids="DFOiWEQ35lgMvYcnCklFP5,OnEogCY8k3MQWsVjKcIyyC" IsFeedback="true" />
+          <Link Id="EvXXPSuoUWJNSP74qxC1Bo" Ids="EzYGo9D0W98OTYB1anobSF,OnEogCY8k3MQWsVjKcIyyC" />
+          <Link Id="R3KXBa4ft39Pi2elNbax2D" Ids="OnEogCY8k3MQWsVjKcIyyC,K2dVAVnstfkNemkgQUhPIk" />
+          <Slot Id="A7VkpZhMKBKPivcEp6iygh" Name="events" />
+          <Link Id="JcFxPak8eapON1yodflfz0" Ids="My1WkBwxoNmLGt87DLhnLk,DFOiWEQ35lgMvYcnCklFP5" />
+          <Link Id="N38HPuWEoQAQGwHyTVMqsm" Ids="K2dVAVnstfkNemkgQUhPIk,SicHNm35C4HPZq3EvshGkH" />
+          <Link Id="IasEV9bxnH3O86hwD2Ssvz" Ids="UJRiYUgXCvbQWL27oNNFSJ,L6IIojAm1hGNbXrTQhwPST" />
+          <Link Id="OYkQND2ED2LOauZnTdXS8a" Ids="IHurVYqHz7JMqqLEmZR556,BgGyA6QlRrDP3R9m9Cn7YA" />
+          <Link Id="UY1FiRheBNbPitnggn4jFL" Ids="OCjNude9KLeOeJ0N9b1gBP,Tgh1A6VdSaJNKXILxqAIAc" IsHidden="true" />
+          <Link Id="Iq9vmGsKUynLysf69Z4qnz" Ids="Tgh1A6VdSaJNKXILxqAIAc,CqwQabtdB2jOY3GDE9BGHa" />
+          <Link Id="CQqOLp31suSPtvzSo1BCh5" Ids="IbAW3hD9K2cLojl7VuhRHi,OiYqMMccyZPPVVRbHgBu4Z" IsHidden="true" />
+          <Link Id="HBOTFjws0i7PknxDYmlMou" Ids="LZTm6lAN8s2Ldc7izXHjWM,EVQaQLYT89JN3JHDtDy5V5" IsHidden="true" />
+          <Link Id="KGzrDecAwNpNTGMr8a4PEs" Ids="BhmB7u5bcTJMVyCZvO5w4M,COXZ4lQfZYzLyj9hRinRnV" />
+          <Link Id="HSvgN7DBxOaL4G6Kw0ZJsM" Ids="KYz0bz11wOdNadFCjTVS2J,CVnsnAHJIymMhWWveZn37s" />
+          <Link Id="CmnqkU8CiOtMUs8cb6RSIc" Ids="BWjwfpVTjOGNi9z8gdznWe,J5uXnZRzfuTMSsyCH1qRoq" />
+          <Link Id="OMv812rdAILOCRCW5eYSYE" Ids="DsjZflwJEkvLkiwQc8P2DC,LkSyYCKVAvvL7mzu80qbzx" />
+          <Link Id="Vn5AaibUf3sNkkhMjkEjhb" Ids="I4SnRq6YhN8MXLdB3DT3ci,NcVsHLqFTAnPNr81cWLyHq" />
+          <Link Id="O9WYs9lYuGoMwyCFni11m9" Ids="KiGFhI7ZbqJOWj9yU1ELmu,E8vTIah38TsNqYrZTcHctG" />
+          <Link Id="KoIqDMprE83NFlGPVewjBY" Ids="RxxhanbAINzO1S5ziTsLlm,KiAxNV7DNmkN0uFK3yIfcb" />
+          <Link Id="Sos6MvfGaINOiAFruhu8UZ" Ids="OQU9gzQaT8jNWggfqyx9Rs,T25q0h7CvZANyUasY4P21k" />
+          <Link Id="OZ48kUlEBnaM7ROzYk4Hq2" Ids="Dpfx85fqmwSLXbK89gt3Fc,Fx1WVKZIZO0PTVPS7xtwev" />
+          <Link Id="Mgr7Y2kPx5uPJzPCr6Bf7v" Ids="BS08JPSRR59Pvr8y1XEypn,DGha3d4UakvQEEipIwTn0F" />
+          <Link Id="Lmx1WOQsjP0NOdx1sLryLx" Ids="LvV9Or3uCfXMQachvgMwFj,SI0ZL9yTqKMLvlzRZOt3b0" />
+          <Link Id="CZrhio4a8TKNnAqIKkqiCZ" Ids="FvQcJvzLV8wODmYKlWCZ8C,TUnlG7gqLwwPUAJYtWfAG8" />
+          <Link Id="SmWaHc7bIhVNK7C7Nwh7Cb" Ids="UWHXUsMEcZnMCvFG4NjGBg,GLIGcUunpWoMJWJF7nQ4ty" />
+          <Link Id="FmCOpO6yiVSN8CaYewL0g0" Ids="OiYqMMccyZPPVVRbHgBu4Z,VFmNAwrGIEuONIErCtGXW3" />
+          <Link Id="FxQNFbt0rxyMxad7E9NkuR" Ids="UPse4FvyIWUQZMA4EuO5XX,LZTm6lAN8s2Ldc7izXHjWM" />
+          <Link Id="O6Y3JDbe7ZrPXSiVRCcqSx" Ids="CqwQabtdB2jOY3GDE9BGHa,TfNvu2ItKLbNz48mppiyiu" />
+          <Link Id="HhWYy1MZgpEOga79Z7G9fP" Ids="SBFarPSOF4NLX3JVh8kDXZ,Qad8rF97snHLEQQtW7xgGj" />
+          <Link Id="DEgf9Jz4GRJPJMdWHRiigh" Ids="GE9r3pYtuNvOpRhChOAuuS,LeOa1pt8TD2Mbs35SmxeoZ" />
+          <Link Id="S64tCMlQhvTOH44CFBrNbx" Ids="GloEZNcODmZPCniSH0q49p,HVvsYt78fjcLoumklaXvo5" />
+          <Link Id="Tr5z7TH1VBJQOZohLoZs45" Ids="DmnOE3g6bW5ONRvNvbuRQa,UHup5vy4cv4P5QkUeiDzCv" />
+          <Link Id="SZeOezP2D5OPk0BN3W5Lc2" Ids="E7YV2KT6n8CP1xxu6EJCHf,CjPIUUypDtAMg0IUPRb3kz" />
+          <Link Id="Ru9hHDEJh9oNnmqXP2bxFK" Ids="CjPIUUypDtAMg0IUPRb3kz,TP6gKoxme7oL7QW6sMUR7J" />
+          <Link Id="MZdjb2xwWxINgAfCDvgx3h" Ids="UN7dINaS9zCQR4T7S3NSlS,Q5aVmA9iUhyQQU1sdhghir" />
+          <Link Id="SHs4EApUWhEOXZXJ3G2YbM" Ids="Q5aVmA9iUhyQQU1sdhghir,NvjnHHL9d8fQAt9PT8Gbw9" />
+          <Link Id="GmXTHOXU4dOPkJ3Zuuo12d" Ids="FwhmgNSIafXN1uvPw54VnP,MqLNIpRuegRQbzYoL6FasH" />
+          <Link Id="DOsMMYySopxOEhJY10TqQR" Ids="Ki2hoNzlcUQNsUzogC3vzu,SviPQF2hoeuLvyDpUusfeB" />
+          <Link Id="ORmRMK2EaFsOw0u2nOwB6U" Ids="F82R45nHATaLGVS9BXHLzU,URBWCWr0etWM6HS75XsSyd" />
+          <Link Id="HBeWayPkKhXPj3t3KZNCxz" Ids="Qw2AwgZOJxtQBTCmTHKhFh,DM8BlWQY7t9LviEPo4Vp99" />
+          <Link Id="QPygBeAD0MuPS90pBPWCpD" Ids="Ajl4P11XwgLOpFxDd9hvXk,AVOPjnWeIaKO5ml42cMFwl" />
+          <Link Id="QBwO1uRCpZQNNgXX1Hxvnw" Ids="AVOPjnWeIaKO5ml42cMFwl,HoT0Uych1ILLHppjRLC8ls" />
+          <Link Id="LqW6RpZLV8NMEvxyNXCIUw" Ids="HoT0Uych1ILLHppjRLC8ls,EBjrDvvODBkPbs5g5kOOvQ" IsHidden="true" />
+          <Link Id="Nuph51b2KhEQFFYCQSv5ck" Ids="DM8BlWQY7t9LviEPo4Vp99,Gcm1mphvheJLNbFoUhB4sV" />
+          <Link Id="IAFyuJgY9jzPa1Kha7ZxT1" Ids="Gcm1mphvheJLNbFoUhB4sV,N6jrRhHNtkuPhW44v7nE1t" IsHidden="true" />
+          <Link Id="Dt9oLZnNi6LPMZdhRfK6CE" Ids="UoDq4a7ULFOOCX4DpUkHil,Shr6zIwmrUzQZNizKIsnQr" />
+          <Link Id="O5gq57iaZsQPjv4N8Rq3m3" Ids="Shr6zIwmrUzQZNizKIsnQr,FOC3BfCeEp7Mih7T4TtMd0" />
+          <Link Id="MDYsEOUFN4yO9106qBnFhu" Ids="FOC3BfCeEp7Mih7T4TtMd0,Ln5nZT3b9mkQFIQXZ6PcVS" IsHidden="true" />
+          <Link Id="JvgyPnY1nk8MXz7vn9BijT" Ids="URBWCWr0etWM6HS75XsSyd,H4MFe20rM1TP2ZWlgm3lYv" />
+          <Link Id="OeS30hM50t6PgXiiBDodgr" Ids="MqLNIpRuegRQbzYoL6FasH,H203yfaIoEpNAbELEz0h9R" />
+          <Slot Id="EgY0qXaGGQ9NWksdC0LyM3" Name="EventsRessource" />
+          <Link Id="Q2svHNgFaaYLi8FbIGttXj" Ids="DeEEmg1rxEMN9NgviPTTN2,MIca5L65o1hNa8wtQfDr8W" />
+          <Link Id="Lb7ybxf4w8sM9OQGsYChNY" Ids="RBzYTV3hYaSPyuca0KtPXO,OLhgszwRe4sPi7xoQYTLtn,UmJzhFbOaOiNj563LSovX5" />
+          <Link Id="RQbwteRtElXLD0i6180VT0" Ids="I0eglhIYbxZOtDleWVdGXI,VJ2JetfFFdJOooNdeVkOZM" />
+          <Link Id="Ik3UaWsjILbPc66JaDUvuV" Ids="PW3TQs3TgtPNuL8Xeicp3c,CmkuQgOKoEmOZUvJVlGGAV" />
+          <Link Id="SIGmPwxhrwyNkNHI2fSMrc" Ids="H4MFe20rM1TP2ZWlgm3lYv,C9jQUEawRSILrPghzbSUfF" />
+          <Link Id="VH8FLFlpVJaMu7ujFIrcJd" Ids="DR7HxdhWx1yPwPIBhFwWLO,Lv4O3R80qkkPs76wtJzfld" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ BaseClientService ************************
+
+-->
+      <Node Name="BaseClientService" Bounds="137,344" Id="V54a5vzDKnwLge9wzLni0u">
+        <p:NodeReference>
+          <Choice Kind="ForwardDefinition" Name="Forward" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <p:TypeAnnotation LastCategoryFullName="Google.Apis.Services" LastSymbolSource="Google.Apis.dll">
+          <Choice Kind="TypeFlag" Name="BaseClientService" />
+        </p:TypeAnnotation>
+        <Patch Id="SC2bivrMiiRO1XmzuzszDg">
+          <Canvas Id="FiWSmFOUoW3NTyRq2ljzi6" />
+          <ProcessDefinition Id="LBquqHbFhr2QKu4H4Tp1Hh" IsHidden="true" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ GetEventDetails ************************
+
+-->
+      <Node Name="GetEventDetails" Bounds="520,479" Id="GDu6aMHcu52MTz06PtfxQC">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" Name="Process" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="FrixoaOQ4wrNyGqQNf1Usf" IsGeneric="true">
+          <Canvas Id="VpLGKjCcF01QXxejqxQfI9">
+            <Node Bounds="469,849,59,13" Id="NbWLB9qpFsXLBzjlEXF4Ku">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+              </p:NodeReference>
+              <Pin Id="TsagzISbgoUPYo6UaDYg2n" Name="X" Kind="InputPin" />
+              <Pin Id="T4T6MWWcwDVQdkRylWgJk9" Name="Result" Kind="OutputPin" />
+              <Pin Id="DhsHGXh41pQPOKl4DkWahJ" Name="Not Assigned" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="470,925,189,306" Id="HhbVy3Ztn7YNtnEvCI7mYT">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="JQaWwqFX5ALOVKP67lOl9S" Name="Condition" Kind="InputPin" />
+              <Patch Id="SluR5HM68vhN9PUjzMrzTl" ManuallySortedPins="true">
+                <Patch Id="ASWtfGpyEj2N75D7PQhKLt" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="Awv9V7g2ipdNW8txOJEgFu" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="571,1002,53,22" Id="TnpSF8uvTT2OCmxaUpIH7J">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.Events" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Items" />
+                    <CategoryReference Kind="AssemblyCategory" Name="Events" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="GsDtccdodFUNDjJc3bC21g" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="VE7smmtdc2cL6ojImIBI8y" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="AbBTGEKE4BkLfA9iBTt816" Name="Items" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="540,1053,107,143" Id="T0wEEkRnP4jOVvdP52Pb8P">
+                  <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                    <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    <CategoryReference Kind="Category" Name="Primitive" />
+                  </p:NodeReference>
+                  <Pin Id="CiAD01qwF6tQGlmIgCuDWs" Name="Break" Kind="OutputPin" />
+                  <Patch Id="Cb9RYqiDpeQP2sGqT8qFXI" ManuallySortedPins="true">
+                    <Patch Id="CeadBwtlfzMNQVpWVQNUHZ" Name="Create" ManuallySortedPins="true" />
+                    <Patch Id="UbRtcBgho7NOK9MEG0rstq" Name="Update" ManuallySortedPins="true" />
+                    <Patch Id="AxdQolztsJ9Pa8QidQJdYT" Name="Dispose" ManuallySortedPins="true" />
+                    <Node Bounds="552,1130,72,22" Id="DoV0ICvCvgwM5ftdJxBFAX">
+                      <p:NodeReference LastCategoryFullName="Primitive.Delegates.Delegate (1 -&gt; 1)" LastSymbolSource="CoreLibBasics.vl">
+                        <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                        <Choice Kind="OperationCallFlag" Name="Invoke" />
+                        <CategoryReference Kind="FuncType" Name="Delegate (1 -&gt; 1)" NeedsToBeDirectParent="true" />
+                      </p:NodeReference>
+                      <Pin Id="D2ihvVvEYKGOCByfftCO8m" Name="Input" Kind="StateInputPin" />
+                      <Pin Id="Pu8kDU42yisLVoW8aqp4IV" Name="Arg" Kind="InputPin" />
+                      <Pin Id="ILrEESgBg6GQdv2yyjDNyG" Name="Result" Kind="OutputPin" />
+                    </Node>
+                  </Patch>
+                  <ControlPoint Id="FJKgbrL9LguPaQDpT7CKhS" Bounds="621,1059" Alignment="Top" />
+                  <ControlPoint Id="SBKShIFrMLuPgJEhR6XPl8" Bounds="555,1190" Alignment="Bottom" />
+                </Node>
+                <Node Bounds="482,948,94,22" Id="GPjMTj67rGGPjfPS64vb76">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Requests.ClientServiceRequest`1" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Execute" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ClientServiceRequest`1" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="SCyeQ3RIlTiOOu1pkf8rtq" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="SV0YIjxXcYRLWzZ0frmTGK" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="VKFLdMUBB9CLLDEaNMBnWg" Name="Result" Kind="OutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="RV18bSPSVIrN6XYdaL814G" Bounds="556,1225" Alignment="Bottom" />
+              <ControlPoint Id="LuvbayGQG4FMzsjZHtjxTo" Bounds="534,936" Alignment="Top" />
+            </Node>
+            <ControlPoint Id="SCX03qI1bnVNX2dVzbStSr" Bounds="362,1066" />
+            <ControlPoint Id="Oj2P0XbJfHQLkqe083aWhR" Bounds="556,1279" />
+            <ControlPoint Id="IhVTQxPNAq7NZwQpt0KX1P" Bounds="481,722" />
+          </Canvas>
+          <Patch Id="JWWcnhHdyFpOaJNRaeI5QJ" Name="Create" />
+          <Patch Id="UzIje2aZv7pMle3hZS3vhl" Name="Update">
+            <Pin Id="FpbXmRFAbHBMs4wG1rY4Lb" Name="EventDelegate" Kind="InputPin" Bounds="1042,1091" />
+            <Pin Id="CgG9LwDTiUUPiENRzdJAX7" Name="ListRequest" Kind="InputPin" Bounds="485,831" />
+            <Pin Id="EQoCt74YKWxMt5dLdYbgJQ" Name="Output" Kind="OutputPin" Bounds="801,1444" />
+          </Patch>
+          <ProcessDefinition Id="M8GMBosppgpM5ncwXhW0dk">
+            <Fragment Id="IEFKmjxga8tQbAyah2FPj6" Patch="JWWcnhHdyFpOaJNRaeI5QJ" Enabled="true" />
+            <Fragment Id="GPolB4oqmHLMuoKYChBay5" Patch="UzIje2aZv7pMle3hZS3vhl" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="F1HH8AWYySDPLhcIYibvDl" Ids="AbBTGEKE4BkLfA9iBTt816,FJKgbrL9LguPaQDpT7CKhS" />
+          <Link Id="SU8VtDaNihnNRyBOAKCvAq" Ids="VKFLdMUBB9CLLDEaNMBnWg,GsDtccdodFUNDjJc3bC21g" />
+          <Link Id="TKg7SVp7gLEPmlgbJ19d2F" Ids="SCX03qI1bnVNX2dVzbStSr,D2ihvVvEYKGOCByfftCO8m" />
+          <Link Id="MeIe2KDWRRjOoHXOr9s5v3" Ids="FpbXmRFAbHBMs4wG1rY4Lb,SCX03qI1bnVNX2dVzbStSr" IsHidden="true" />
+          <Link Id="P9VndL2KoVnPnttreaJg10" Ids="ILrEESgBg6GQdv2yyjDNyG,SBKShIFrMLuPgJEhR6XPl8" />
+          <Link Id="UKmyP3nQFqzPRvpAy2bZin" Ids="LuvbayGQG4FMzsjZHtjxTo,RV18bSPSVIrN6XYdaL814G" IsFeedback="true" />
+          <Link Id="NBeTq1B7ptjOVEMO8uUFx3" Ids="SBKShIFrMLuPgJEhR6XPl8,RV18bSPSVIrN6XYdaL814G" />
+          <Link Id="Reo3o6JfrHZL87aQaxMmMU" Ids="RV18bSPSVIrN6XYdaL814G,Oj2P0XbJfHQLkqe083aWhR" />
+          <Link Id="QK8RUUNOrZrQJsxd6QwI58" Ids="Oj2P0XbJfHQLkqe083aWhR,EQoCt74YKWxMt5dLdYbgJQ" IsHidden="true" />
+          <Link Id="PSJbTd1yxt2NTApk4VIG9a" Ids="FJKgbrL9LguPaQDpT7CKhS,Pu8kDU42yisLVoW8aqp4IV" />
+          <Link Id="QOwEfF0CUjoLAmS1ghiNZg" Ids="IhVTQxPNAq7NZwQpt0KX1P,SCyeQ3RIlTiOOu1pkf8rtq" />
+          <Link Id="PJke0YePXayOeQLydurH3l" Ids="CgG9LwDTiUUPiENRzdJAX7,IhVTQxPNAq7NZwQpt0KX1P" IsHidden="true" />
+          <Link Id="HPpjJkmuYwcNBkhxevGt3V" Ids="T4T6MWWcwDVQdkRylWgJk9,JQaWwqFX5ALOVKP67lOl9S" />
+          <Link Id="KGzkHBcR6GROO5sCzLxmnu" Ids="IhVTQxPNAq7NZwQpt0KX1P,TsagzISbgoUPYo6UaDYg2n" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ Initialize ************************
+
+-->
+      <Node Name="Initialize" Category="IO.gCal" Bounds="520,306" Id="RxZRUB4DedENqgOwXAvzus">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" Name="Process" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="D2iCA2nz9mJMuIqcvlhGwT">
+          <Canvas Id="R4MdnGogrnoNxbqGlByLya">
+            <ControlPoint Id="B35LiEmvtl5MXn6AkAhHE6" Bounds="551,335" />
+            <Node Bounds="441,277,92,22" Id="L0S6R0MTUdMPxbfGcebDOX">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService.Initializer" LastSymbolSource="Google.Apis.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="BaseClientService" />
+                <CategoryReference Kind="AssemblyCategory" Name="Initializer" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+              </p:NodeReference>
+              <Pin Id="KtzBsKKhbALLjd0bmz2O1s" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="442,545,66,22" Id="KigDEiKl4sFLfsIxstHE9y">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.CalendarService" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="CalendarService" />
+                <Choice Kind="OperationCallFlag" Name="Events" />
+              </p:NodeReference>
+              <Pin Id="QhKwWfvm8xWQTCWG0jbPqH" Name="Input" Kind="InputPin" />
+              <Pin Id="UQgg1ZCYzUcMrBOdpe85Ep" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="KmvX0wPKXoYLdCxm2f9ZSU" Name="Events" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="441,499,66,22" Id="E6Mio2tI3XEMNB1yfrCsut">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.CalendarService" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="CalendarService" />
+                <Choice Kind="OperationCallFlag" Name="Create" />
+                <CategoryReference Kind="AssemblyCategory" Name="CalendarService" NeedsToBeDirectParent="true" />
+                <PinReference Kind="InputPin" Name="Initializer" />
+              </p:NodeReference>
+              <Pin Id="BqKUOD79aUdNXFiTFz1Lrr" Name="Initializer" Kind="InputPin" />
+              <Pin Id="T79sGXWoayBQNbZP6AHmfR" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="441,460,102,22" Id="M1JTaUoCJduNB2MaGrL0aO">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService.Initializer" LastSymbolSource="Google.Apis.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="SetApplicationName" />
+                <CategoryReference Kind="AssemblyCategory" Name="Initializer" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="AssemblyCategory" Name="BaseClientService" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+              </p:NodeReference>
+              <Pin Id="IQfDec2KHO3NYraSZHrAgg" Name="Input" Kind="StateInputPin" />
+              <Pin Id="N5MArd1wS14No0g8JBSHJc" Name="Value" Kind="InputPin" />
+              <Pin Id="ECsau2AjFrnPM5yhiiiNk7" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="441,373,114,22" Id="B3wdxuFkQ04QLI3BkgJJTB">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService.Initializer" LastSymbolSource="Google.Apis.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="Initializer" NeedsToBeDirectParent="true">
+                  <p:OuterCategoryReference Kind="AssemblyCategory" Name="BaseClientService" NeedsToBeDirectParent="true" />
+                </CategoryReference>
+                <Choice Kind="OperationCallFlag" Name="SetHttpClientInitializer" />
+              </p:NodeReference>
+              <Pin Id="BQffJA8xvfRPiqgWhe1Aay" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Tdt7NNZqxhtOOZaqXB7oWq" Name="Value" Kind="InputPin" />
+              <Pin Id="KMmbTOB0iLlPPtgkQed5Ol" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <ControlPoint Id="FFjn9aSfy5COVE2xLdeeR9" Bounds="504,613" />
+            <ControlPoint Id="UILTwVZtIheQGB5zMypOkw" Bounds="539,425" />
+            <Node Bounds="410,597,66,22" Id="PSxtygVh2hxP3CeT3871kB">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.CalendarService" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="CalendarService" />
+                <Choice Kind="OperationCallFlag" Name="CalendarList" />
+              </p:NodeReference>
+              <Pin Id="VNPPoBnrplzPdPZyTpqzsK" Name="Input" Kind="StateInputPin" />
+              <Pin Id="IMLzV8wy2b1NylQzrlmPIT" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="CyJdWOMyjyzPAR1f898Ry8" Name="Calendar List" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="KvrP1jFyQYUQJKbZvCbkrW" Bounds="472,646" />
+            <Pad Id="VOfs8BLtGUwMxaPNubcCfg" Bounds="441,340">
+              <p:ValueBoxSettings />
+            </Pad>
+          </Canvas>
+          <Patch Id="Egb6bFyHiXgM4M2SrjnxiI" Name="Create" ParticipatingElements="L0S6R0MTUdMPxbfGcebDOX" />
+          <Patch Id="FmVzQvzl2wrPHCtJalU2Vd" Name="Update">
+            <Pin Id="GvKj6Gwq73aOoMEIbNQVCQ" Name="Calendar List" Kind="OutputPin" Bounds="472,646" />
+            <Pin Id="PQEpQDsQ4IdN6sczqjN840" Name="EventsRessource" Kind="OutputPin" Bounds="502,632" />
+            <Pin Id="Bhg3f7g4EhcOoLcba5NR0u" Name="ApplicationName" Kind="InputPin" Bounds="610,401" DefaultValue="&quot;MyApplicationName&quot;">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+            <Pin Id="Jx6I8OPzwYeN4xWz6e066I" Name="Credentials" Kind="InputPin" Bounds="257,142" />
+          </Patch>
+          <ProcessDefinition Id="NkQ8H0aRsJKPvgg8Lu7kql">
+            <Fragment Id="Ieb1zyns03POaXXTOyBb3A" Patch="Egb6bFyHiXgM4M2SrjnxiI" Enabled="true" />
+            <Fragment Id="PrllbMwU8VgOsOl9GeZ9wK" Patch="FmVzQvzl2wrPHCtJalU2Vd" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="NSLtAS01mT8LILPVdskBap" Ids="B35LiEmvtl5MXn6AkAhHE6,Tdt7NNZqxhtOOZaqXB7oWq" />
+          <Link Id="EeylqNWCY2jMPowUL8ofBT" Ids="Jx6I8OPzwYeN4xWz6e066I,B35LiEmvtl5MXn6AkAhHE6" IsHidden="true" />
+          <Link Id="A50nH3BSkT3MDPLqkkXp7v" Ids="T79sGXWoayBQNbZP6AHmfR,QhKwWfvm8xWQTCWG0jbPqH" />
+          <Link Id="NevvQVRBoPkPM0ajerq3Py" Ids="KMmbTOB0iLlPPtgkQed5Ol,IQfDec2KHO3NYraSZHrAgg" />
+          <Link Id="LELXCpmWAkAOtCWBPfJXPw" Ids="ECsau2AjFrnPM5yhiiiNk7,BqKUOD79aUdNXFiTFz1Lrr" />
+          <Link Id="DYVmY9EIafEPwMJO87G5Jv" Ids="KmvX0wPKXoYLdCxm2f9ZSU,FFjn9aSfy5COVE2xLdeeR9" />
+          <Link Id="TQYaUZvKhJUNzGC9H7Kgf1" Ids="FFjn9aSfy5COVE2xLdeeR9,PQEpQDsQ4IdN6sczqjN840" IsHidden="true" />
+          <Link Id="Mf5xolSl04UNc0HrAF1qRc" Ids="UILTwVZtIheQGB5zMypOkw,N5MArd1wS14No0g8JBSHJc" />
+          <Link Id="FcZRsGFNaNRNi1XzesAOnl" Ids="Bhg3f7g4EhcOoLcba5NR0u,UILTwVZtIheQGB5zMypOkw" IsHidden="true" />
+          <Link Id="SxuiPNm3AvePZA9iEJz2jz" Ids="UQgg1ZCYzUcMrBOdpe85Ep,VNPPoBnrplzPdPZyTpqzsK" />
+          <Link Id="LfFs9tPN76nPVVafs7yhHS" Ids="CyJdWOMyjyzPAR1f898Ry8,KvrP1jFyQYUQJKbZvCbkrW" />
+          <Link Id="IdCXb81KWZePcQkDrX9fJ2" Ids="KvrP1jFyQYUQJKbZvCbkrW,GvKj6Gwq73aOoMEIbNQVCQ" IsHidden="true" />
+          <Link Id="Sdw0Zo8uqlhNGHOJVJlXW8" Ids="KtzBsKKhbALLjd0bmz2O1s,VOfs8BLtGUwMxaPNubcCfg" />
+          <Link Id="RFrr8FDEgYFOaS9WGJGynU" Ids="VOfs8BLtGUwMxaPNubcCfg,BQffJA8xvfRPiqgWhe1Aay" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ SetupListRequest ************************
+
+-->
+      <Node Name="SetupListRequest" Category="IO.gCal" Bounds="520,440" Id="ApohQ6tezWCQZPACenyJTQ">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="TEJGrX5aUFlQOZuPt8lUr0" IsGeneric="true">
+          <Canvas Id="TjnySE4xckkMb34rD23QDl">
+            <ControlPoint Id="O9GgEZQk5O6NGIfl74Yqnt" Bounds="269,602" />
+            <ControlPoint Id="U6qKGeHfmavNqCfy2mGEv7" Bounds="288,381" />
+            <Node Bounds="590,350,331,468" Id="VlD7hrjjnh7MSzVqrm7lw5">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="KYesn1VXeIiMSP5DMwliaz" Name="Condition" Kind="InputPin" />
+              <Patch Id="DLChCJPTAAKL0yowyrW2JE" ManuallySortedPins="true">
+                <Patch Id="QXVBFOYSqwSNg7jLHpNV6f" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="VDx9v46WwiWNFdfBBRlQri" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="603,427,63,22" Id="TQ8FUdtW0KRPOts8mPcT1s">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                    <Choice Kind="OperationCallFlag" Name="SetTimeMin" />
+                  </p:NodeReference>
+                  <Pin Id="NViG5VQ9mYpQIeqHUEnGSw" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="CJ4YcHslQulPGkJDWJBRAW" Name="Value" Kind="InputPin" />
+                  <Pin Id="P3e0VPqvXFzMGJXDuVsmGk" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="701,373,29,13" Id="SmzuJWLBHpcLpyLLdMH05i">
+                  <p:NodeReference LastCategoryFullName="System.DateTime" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Now" />
+                    <CategoryReference Kind="RecordType" Name="DateTime" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="NkVUwVADA1mOzEkj22WHx2" Name="Now" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="701,400,41,13" Id="RJt1yEu9DDDNRaNVoEwdyK">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="CastAs" />
+                  </p:NodeReference>
+                  <Pin Id="Mf39jX9Hn8lNdPNx88dveh" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="IFZIaZUfhAeLuAH9v9n6ie" Name="Default" Kind="InputPin" />
+                  <Pin Id="L7yBSL3J4bZQKCgofWti1z" Name="Result" Kind="OutputPin" />
+                  <Pin Id="E6SQ1DS3fbBPxLuIx4dSiZ" Name="Success" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="602,488,83,22" Id="TeNjHMAajDLNlFGbwYW7NG">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                    <Choice Kind="OperationCallFlag" Name="SetShowDeleted" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                  </p:NodeReference>
+                  <Pin Id="Qc7yL7OFlGtMJ35s8hnEUo" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="ApKJ4dSvw1mOtP8duQs2DJ" Name="Value" Kind="InputPin" />
+                  <Pin Id="O4gw4G4FSaUODCx6f9zm7s" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="704,461,41,13" Id="RG9S8qql1mHNl3WQXPaJRi">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="CastAs" />
+                  </p:NodeReference>
+                  <Pin Id="Bx4cVQZwgB6QDJYwytSNph" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="PQQcI7EQG01LzhLlP144ht" Name="Default" Kind="InputPin" />
+                  <Pin Id="U5Ibwx05pcGOmNKUpqcCPH" Name="Result" Kind="OutputPin" />
+                  <Pin Id="J7jxaADtzj8LE0kl79DxGJ" Name="Success" Kind="OutputPin" />
+                </Node>
+                <Pad Id="LdKCmDSWDn8MciW2fZ78sx" Comment="" Bounds="704,437,40,19" ShowValueBox="true" isIOBox="true" Value="false">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                    <FullNameCategoryReference ID="Primitive" />
+                  </p:TypeAnnotation>
+                  <p:ValueBoxSettings />
+                </Pad>
+                <Node Bounds="606,557,83,22" Id="MYK6MVVA64hP9wHH30HAay">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                    <Choice Kind="OperationCallFlag" Name="SetSingleEvents" />
+                  </p:NodeReference>
+                  <Pin Id="NzhnkRmNZz2MQYmAX9aTpR" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="PnHoTVWYp1JNmn5K2TLedl" Name="Value" Kind="InputPin" />
+                  <Pin Id="LeaiTfHr07zOTVy0jKJhkM" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="708,527,41,13" Id="B8tINg3iWBPOL57Nu6Jiz3">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="CastAs" />
+                  </p:NodeReference>
+                  <Pin Id="JygMd6whkDMPfv3hvDBSDI" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="G2whQ7pmNbPO0nRT9ANJ54" Name="Default" Kind="InputPin" />
+                  <Pin Id="ThF4e3SerPxOjpbj4GGWTM" Name="Result" Kind="OutputPin" />
+                  <Pin Id="EsyVT6JUZILMc5Jf27dxGq" Name="Success" Kind="OutputPin" />
+                </Node>
+                <Pad Id="UnYbmkdi9EYPy5chlNvBUv" Comment="" Bounds="708,503,40,19" ShowValueBox="true" isIOBox="true" Value="true">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                    <FullNameCategoryReference ID="Primitive" />
+                  </p:TypeAnnotation>
+                  <p:ValueBoxSettings />
+                </Pad>
+                <Node Bounds="606,776,83,22" Id="LEURELon6MQNJPw1y6eA9d">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                    <Choice Kind="OperationCallFlag" Name="SetMaxResults" />
+                  </p:NodeReference>
+                  <Pin Id="SaB94PqzTy3NXtLeT5X8Bz" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Fg0B7qzrVyANImzQUQRpvR" Name="Value" Kind="InputPin" />
+                  <Pin Id="C26UoHktpbdPX3SJjJ6pyJ" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="684,737,41,13" Id="SSkSnrLgUQLOSJzinNANCJ">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="CastAs" />
+                  </p:NodeReference>
+                  <Pin Id="FbEBpj0yWUBPRoAwRM0KxG" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="LjQCJTPyPocMP4D1WsEGWN" Name="Default" Kind="InputPin" />
+                  <Pin Id="DZ9J5ZfW14DOkaktsU2nXF" Name="Result" Kind="OutputPin" />
+                  <Pin Id="PpAegY4Z6CkPNbBUQF43QA" Name="Success" Kind="OutputPin" />
+                </Node>
+                <Pad Id="OcSXKZ7UpLMNonJmchAV7p" Comment="MaxResults" Bounds="686,712,24,19" ShowValueBox="true" isIOBox="true" Value="10">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Integer32" />
+                    <FullNameCategoryReference ID="Primitive" />
+                  </p:TypeAnnotation>
+                  <p:ValueBoxSettings />
+                </Pad>
+                <Node Bounds="612,628,60,22" Id="GDDuKVHb1IKMSitOJXDUlA">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" />
+                    <CategoryReference Kind="AssemblyCategory" Name="ListRequest" NeedsToBeDirectParent="true">
+                      <p:OuterCategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                    </CategoryReference>
+                    <Choice Kind="OperationCallFlag" Name="SetOrderBy" />
+                  </p:NodeReference>
+                  <Pin Id="H7QP5dQWD49LPv01kri84D" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="NUkybuPjCvBPJwYL4XouAR" Name="Value" Kind="InputPin" />
+                  <Pin Id="Jp1KVowJREaOIGlVIIhX52" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="706,604,41,13" Id="JWRTkKlE4MKNAJvGCKj80n">
+                  <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="CastAs" />
+                  </p:NodeReference>
+                  <Pin Id="EkPPFW0H1i2LMIAYfcxiNt" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="TkkCrbH4ifvLIRBcObSz2J" Name="Default" Kind="InputPin" />
+                  <Pin Id="HYKrVTeppPJPY39dSKZ5Vq" Name="Result" Kind="OutputPin" />
+                  <Pin Id="LUFIy2mcdz6P3JqIahygLS" Name="Success" Kind="OutputPin" />
+                </Node>
+                <Pad Id="L5yGcCVSIGuNtbrU1eu8j8" Comment="order" Bounds="709,577,86,20" ShowValueBox="true" isIOBox="true" Value="&quot;StartTime&quot;">
+                  <p:TypeAnnotation LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource.ListRequest" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="TypeFlag" Name="OrderByEnum" />
+                  </p:TypeAnnotation>
+                </Pad>
+              </Patch>
+            </Node>
+            <Pad Id="BoxR1OfSSwDLzDGpfHkcQb" Bounds="582,330,66,22" ShowValueBox="true" isIOBox="true" Value="&quot;example:&quot;">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <ControlPoint Id="LfbloVochmJK9kxBqSEBGe" Bounds="444,361" />
+            <Pad Id="S2B1KJfUFAIL6j92Uczk7B" Bounds="160,217,383,22" ShowValueBox="true" isIOBox="true" Value="&quot;with this node, several high-level query-nodes can be built&quot;">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+              <p:ValueBoxSettings>
+                <p:fontsize p:Type="Int32">9</p:fontsize>
+                <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+              </p:ValueBoxSettings>
+            </Pad>
+            <ControlPoint Id="I4isxXsNRyzN0EKpMom24H" Bounds="255,283" />
+            <Node Bounds="254,341,59,13" Id="OYiYPIjdagYOq0fYIqsZxH">
+              <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+              </p:NodeReference>
+              <Pin Id="UmYgJeKoQAsMol2gWjSHJD" Name="X" Kind="InputPin" />
+              <Pin Id="BZglP88vaLrNQKm51hFIfA" Name="Result" Kind="OutputPin" />
+              <Pin Id="RBcrhhj0bPCNygVolYHOHQ" Name="Not Assigned" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="254,402,204,177" Id="JVhMyBgqKZFOFD6rz9aSTG">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="Ji10oBJze1nM8TNXQYXNCE" Name="Condition" Kind="InputPin" />
+              <Patch Id="RA1tB00BuZGMjfkZ8a2H6K" ManuallySortedPins="true">
+                <Patch Id="Ko6dFQG5611LyCAdM3oRZZ" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="NZMSHF2HgayOM5VMMSOhGf" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="382,425,65,22" Id="SLFs654z4dUNXXgVwToT6M">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.EventsResource" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="List" />
+                    <CategoryReference Kind="AssemblyCategory" Name="EventsResource" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="RUs3oskcZWzLuLnkAUzb9R" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="PLF0ItA1LSBQPJB0F2YDv2" Name="Calendar Id" Kind="InputPin" />
+                  <Pin Id="GnPUpLUV8cfQQ1NS4t3Y3C" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="QN1rqY6UYQDPGAFwivdCod" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="289,502,158,22" Id="K3JMqFxoNzGLbFt78GI6Gp">
+                  <p:NodeReference LastCategoryFullName="Primitive.Delegates.Delegate (1 -&gt; 1)" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Invoke" />
+                    <CategoryReference Kind="FuncType" Name="Delegate (1 -&gt; 1)" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="K4qIDoBLaJzM9e8gWquUaA" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="HbJdhECGrJ4MB12bGWOe4h" Name="Arg" Kind="InputPin" />
+                  <Pin Id="Ab4B0hRUQmHLzV6W7T2oLe" Name="Result" Kind="OutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="DIApzlhDN72LRQbangfZ4j" Bounds="271,573" Alignment="Bottom" />
+              <ControlPoint Id="BrH1jFYsRFGM5KjIPeYZmz" Bounds="269,408" Alignment="Top" />
+            </Node>
+            <ControlPoint Id="MLIMT94MG5bP6hXbQJ6tEF" Bounds="383,342" />
+          </Canvas>
+          <Patch Id="BtSYw9QCKcKMrACC9XOpjg" Name="Create" />
+          <Patch Id="OaeXQ9dnuhgOiAZhNzpuGH" Name="Update">
+            <Pin Id="POxTHcXVCXrOzBj8qU2w5e" Name="Input" Kind="InputPin" Bounds="318,280" />
+            <Pin Id="Q7CYpiqSiK9OopxcIvoJVa" Name="ListRequest" Kind="OutputPin" Bounds="386,809" />
+            <Pin Id="EyZhxkc5j32PZvmpBfGTml" Name="FilterDelegate" Kind="InputPin" Bounds="243,471" />
+            <Pin Id="BBjw6edXbpcLSuLqhxtX7f" Name="Calendar Id" Kind="InputPin" Bounds="396,325" DefaultValue="&quot;primary&quot;">
+              <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="String" />
+              </p:TypeAnnotation>
+            </Pin>
+          </Patch>
+          <ProcessDefinition Id="Da9Z8wY7qGDOBF5sZxHOws">
+            <Fragment Id="DtZSst1caQyM5qGqwJNglW" Patch="BtSYw9QCKcKMrACC9XOpjg" Enabled="true" />
+            <Fragment Id="MARHckxGEqzNoZ63ZDqsCt" Patch="OaeXQ9dnuhgOiAZhNzpuGH" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="FYp6O9DlCzBOaVDcEjLJOC" Ids="O9GgEZQk5O6NGIfl74Yqnt,Q7CYpiqSiK9OopxcIvoJVa" IsHidden="true" />
+          <Link Id="JEK7pwk2BtNN3RSuxBAQVz" Ids="U6qKGeHfmavNqCfy2mGEv7,K4qIDoBLaJzM9e8gWquUaA" />
+          <Link Id="BhFaNhYwEIrMQARVkBMYQA" Ids="EyZhxkc5j32PZvmpBfGTml,U6qKGeHfmavNqCfy2mGEv7" IsHidden="true" />
+          <Link Id="LB8BGSaZPzXOmJIJRXeX8h" Ids="NkVUwVADA1mOzEkj22WHx2,Mf39jX9Hn8lNdPNx88dveh" />
+          <Link Id="CVBT8oQ8eVbLEu84OD2D77" Ids="L7yBSL3J4bZQKCgofWti1z,CJ4YcHslQulPGkJDWJBRAW" />
+          <Link Id="JJ86iK96ZbTNLU8hXYMWeR" Ids="P3e0VPqvXFzMGJXDuVsmGk,Qc7yL7OFlGtMJ35s8hnEUo" />
+          <Link Id="TznF0BolMiqNJ0DV6rsZKw" Ids="U5Ibwx05pcGOmNKUpqcCPH,ApKJ4dSvw1mOtP8duQs2DJ" />
+          <Link Id="OebwlLXwQh9ONLSUygcGWE" Ids="LdKCmDSWDn8MciW2fZ78sx,Bx4cVQZwgB6QDJYwytSNph" />
+          <Link Id="BG1jgDs1OYINqCYkMZnbL7" Ids="O4gw4G4FSaUODCx6f9zm7s,NzhnkRmNZz2MQYmAX9aTpR" />
+          <Link Id="Gcz4JICuOyGLsbaK9d2mOT" Ids="UnYbmkdi9EYPy5chlNvBUv,JygMd6whkDMPfv3hvDBSDI" />
+          <Link Id="Bq6GmDEzXAmNu23zioYWGy" Ids="ThF4e3SerPxOjpbj4GGWTM,PnHoTVWYp1JNmn5K2TLedl" />
+          <Link Id="HCTbpF1FdGWLGK3Pt901Th" Ids="DZ9J5ZfW14DOkaktsU2nXF,Fg0B7qzrVyANImzQUQRpvR" />
+          <Link Id="VN4iW5UPum7OL1wNIURkpo" Ids="OcSXKZ7UpLMNonJmchAV7p,FbEBpj0yWUBPRoAwRM0KxG" />
+          <Link Id="AiytMWLwT10NprabutHcwg" Ids="HYKrVTeppPJPY39dSKZ5Vq,NUkybuPjCvBPJwYL4XouAR" />
+          <Link Id="S6FnO5BYawOPufgI9MuxkQ" Ids="L5yGcCVSIGuNtbrU1eu8j8,EkPPFW0H1i2LMIAYfcxiNt" />
+          <Link Id="OsrXxdqrIsYMzwcbKKDUGa" Ids="LeaiTfHr07zOTVy0jKJhkM,H7QP5dQWD49LPv01kri84D" />
+          <Link Id="TdkCDDG8gguQSc5OYOHsxJ" Ids="Jp1KVowJREaOIGlVIIhX52,SaB94PqzTy3NXtLeT5X8Bz" />
+          <Link Id="GxwjzLi2xA6OgVmGx5vUhg" Ids="LfbloVochmJK9kxBqSEBGe,PLF0ItA1LSBQPJB0F2YDv2" />
+          <Link Id="TfLx78hRJgULGogVW9Sjyr" Ids="BBjw6edXbpcLSuLqhxtX7f,LfbloVochmJK9kxBqSEBGe" IsHidden="true" />
+          <Link Id="QYqokeBnbwqMzf8At9lJdU" Ids="I4isxXsNRyzN0EKpMom24H,MLIMT94MG5bP6hXbQJ6tEF,RUs3oskcZWzLuLnkAUzb9R" />
+          <Link Id="SDsfLaMpaWQMzE1h3jIVCV" Ids="POxTHcXVCXrOzBj8qU2w5e,I4isxXsNRyzN0EKpMom24H" IsHidden="true" />
+          <Link Id="GI1xx4AALN7LxsRrZs874V" Ids="QN1rqY6UYQDPGAFwivdCod,HbJdhECGrJ4MB12bGWOe4h" />
+          <Link Id="Kv9OibAnHJYLp2WDvMrES8" Ids="I4isxXsNRyzN0EKpMom24H,UmYgJeKoQAsMol2gWjSHJD" />
+          <Link Id="SosYrcZybO7LGS6YAFQBqX" Ids="BrH1jFYsRFGM5KjIPeYZmz,DIApzlhDN72LRQbangfZ4j" IsFeedback="true" />
+          <Link Id="RSnAdOvc45MQQFwnP9qquG" Ids="Ab4B0hRUQmHLzV6W7T2oLe,DIApzlhDN72LRQbangfZ4j" />
+          <Link Id="JfCclrn9lBHPkNodCAzv7C" Ids="DIApzlhDN72LRQbangfZ4j,O9GgEZQk5O6NGIfl74Yqnt" />
+          <Link Id="LsRJknX5xFLPtIZRq8q4oH" Ids="BZglP88vaLrNQKm51hFIfA,Ji10oBJze1nM8TNXQYXNCE" />
+        </Patch>
+      </Node>
+      <!--
+
+    ************************ ListCalendars ************************
+
+-->
+      <Node Name="ListCalendars" Category="IO.gCal" Bounds="520,378" Id="GuSUScY3NFbLQIZKKWFNwQ">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" Name="Process" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="NCHx3qVYxH8NldwxY8aSI9" IsGeneric="true">
+          <Canvas Id="G1gHBQMT7WaPsd0xarmeWJ">
+            <ControlPoint Id="EGIMaE1E1mRPWitEhpdhH8" Bounds="482,624" />
+            <Node Bounds="192,263,87,22" Id="OROVtSKaMX1N0V0rEzXrFz">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.CalendarListResource" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="List" />
+                <CategoryReference Kind="AssemblyCategory" Name="CalendarListResource" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="GxvO90a0TBBNogjn6nPKA9" Name="Input" Kind="StateInputPin" />
+              <Pin Id="UeK4pfGpjBHMIPE3MJnils" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="PJPpJsvMImrQB5BnzM39bY" Name="Result" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="Ups5ssbYUY9PeEPyzlaRVH" Bounds="193,227" />
+            <Node Bounds="274,310,94,22" Id="JB84KXKBfS3NHYR8oaGEXB">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Requests.ClientServiceRequest`1" LastSymbolSource="Google.Apis.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Execute" />
+                <CategoryReference Kind="AssemblyCategory" Name="ClientServiceRequest`1" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="FD8gnhRmIr7N8GYeSPKfYN" Name="Input" Kind="StateInputPin" />
+              <Pin Id="ThcI1AFxGI9NYS9dfnX7pk" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="EovsAsDViXoL4ooUrHJJlJ" Name="Result" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="363,362,53,22" Id="BkOqvKHmu45NtubiievJcO">
+              <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.CalendarList" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="CalendarList" />
+                <Choice Kind="OperationCallFlag" Name="Items" />
+              </p:NodeReference>
+              <Pin Id="Bra8A6DAlf7OlTSEquUd2o" Name="Input" Kind="StateInputPin" />
+              <Pin Id="HzsNx9gjRpHNmtxTUaTGft" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="KCrh6K4Pzn6MHGDgP4IOB7" Name="Items" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="257,415,251,170" Id="C2lqHGvWcOsN91UJysXfN5">
+              <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                <CategoryReference Kind="Category" Name="Primitive" />
+              </p:NodeReference>
+              <Pin Id="Oj6dIFC8kGfNhl8OrJzSgp" Name="Break" Kind="OutputPin" />
+              <Patch Id="VQAarCUyLgqNfpSjB6rMHo" ManuallySortedPins="true">
+                <Patch Id="EohlEMtrR8KOQcvlYsekBo" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="KyUdrlzHHOtNA1ceEUZ4YV" Name="Update" ManuallySortedPins="true" />
+                <Patch Id="MJFx4z2ZepuPt6s8rcbpam" Name="Dispose" ManuallySortedPins="true" />
+                <Node Bounds="412,443,72,22" Id="Ii4yeyK0SDMPjVloqAX0sq">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.CalendarListEntry" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="CalendarListEntry" />
+                    <Choice Kind="OperationCallFlag" Name="Id" />
+                  </p:NodeReference>
+                  <Pin Id="CMomoQ714eYOLXMNVa3ZoY" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="LM30mjnIkWXO5N36oIWf4j" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="MiByeiZCDrMMclux1qpZ2C" Name="Id" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="269,539,72,22" Id="LzmZoXIVVe7MrkUmjtShl1">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.CalendarListEntry" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="CalendarListEntry" />
+                    <Choice Kind="OperationCallFlag" Name="AccessRole" />
+                  </p:NodeReference>
+                  <Pin Id="FeK7JeplaB0Py65lD5mpao" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="GzUWP7vE5mGMgTw7ZOvCY1" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="JR7jh2Ph4OfLuVnMRz6h7Q" Name="Access Role" Kind="OutputPin" />
+                </Node>
+                <Node Bounds="358,495,72,22" Id="SwM35EWMCpWLYKWnrMQnfI">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Calendar.v3.Data.CalendarListEntry" LastSymbolSource="Google.Apis.Calendar.v3.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="AssemblyCategory" Name="CalendarListEntry" />
+                    <Choice Kind="OperationCallFlag" Name="Summary" />
+                  </p:NodeReference>
+                  <Pin Id="Vs7Ra83EXZVLrH7RSIIixe" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="P7AsafghWmoLCFBRUesJFs" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="LEFijvbCz1sM9JtEA0k6gV" Name="Summary" Kind="OutputPin" />
+                </Node>
+              </Patch>
+              <ControlPoint Id="TApGS8WtXQMMuv1QPcGtpq" Bounds="414,421" Alignment="Top" />
+              <ControlPoint Id="KI80StHOooWNVGHplWBiIz" Bounds="482,579" Alignment="Bottom" />
+              <ControlPoint Id="SCY76sY1I9MNNDLBMtUjXI" Bounds="429,579" Alignment="Bottom" />
+              <ControlPoint Id="HG34pIjDNDIMZHeNXcdN00" Bounds="339,579" Alignment="Bottom" />
+            </Node>
+            <ControlPoint Id="PugaCozalHcMt4w4JPEM3y" Bounds="429,624" />
+            <ControlPoint Id="H8BWmNQH3kPMAB7evkiel6" Bounds="339,624" />
+          </Canvas>
+          <Patch Id="GgPGXIx8W93Pnt0LQV44p6" Name="Create" />
+          <Patch Id="GDq5jcjXy7ALayjGlAPiqx" Name="Update" ManuallySortedPins="true">
+            <Pin Id="K2vD9zCpRX1MnAbovpk4cq" Name="CalendarList" Kind="InputPin" Bounds="325,191" />
+            <Pin Id="ALPw9oeBwzYQQbUsILKyQQ" Name="Ids" Kind="OutputPin" Bounds="417,483" />
+            <Pin Id="PNPwo25PB5lLpoca6gEu6d" Name="Acces Roles" Kind="OutputPin" Bounds="409,606" />
+            <Pin Id="AzTwnkcSbF3NGI5sIwpIlA" Name="Name" Kind="OutputPin" Bounds="490,608" />
+          </Patch>
+          <ProcessDefinition Id="IEvbCIjrXEUOd1i4XkMf5d">
+            <Fragment Id="U4L4ipMJEWSNlEFsiGr6sK" Patch="GgPGXIx8W93Pnt0LQV44p6" Enabled="true" />
+            <Fragment Id="DhhyNVw7U6gOjXuFcYqJB1" Patch="GDq5jcjXy7ALayjGlAPiqx" Enabled="true" />
+          </ProcessDefinition>
+          <Link Id="BE9YZJYzfwoLE7GcQcGYdt" Ids="EGIMaE1E1mRPWitEhpdhH8,ALPw9oeBwzYQQbUsILKyQQ" IsHidden="true" />
+          <Link Id="SSv19x90YQ9OcMWfPBmlFz" Ids="Ups5ssbYUY9PeEPyzlaRVH,GxvO90a0TBBNogjn6nPKA9" />
+          <Link Id="GVtv1vH29G9P8fqQjpEJ9q" Ids="K2vD9zCpRX1MnAbovpk4cq,Ups5ssbYUY9PeEPyzlaRVH" IsHidden="true" />
+          <Link Id="Lb7u8BUH4OcNp19LBMJut9" Ids="PJPpJsvMImrQB5BnzM39bY,FD8gnhRmIr7N8GYeSPKfYN" />
+          <Link Id="NjxUswO8W1eMzcMYMJftbG" Ids="EovsAsDViXoL4ooUrHJJlJ,Bra8A6DAlf7OlTSEquUd2o" />
+          <Link Id="UfFtZsD7IW6NYLOJMJxoet" Ids="KCrh6K4Pzn6MHGDgP4IOB7,TApGS8WtXQMMuv1QPcGtpq" />
+          <Link Id="QOPComPrNqJMDS4EkoxEiS" Ids="TApGS8WtXQMMuv1QPcGtpq,CMomoQ714eYOLXMNVa3ZoY" />
+          <Link Id="HVstDcDSEgeNhQBvkzhgOm" Ids="MiByeiZCDrMMclux1qpZ2C,KI80StHOooWNVGHplWBiIz" />
+          <Link Id="DSsYHnJXq9kLoOvCLnBHBT" Ids="KI80StHOooWNVGHplWBiIz,EGIMaE1E1mRPWitEhpdhH8" />
+          <Link Id="VO0n6mZRzyeNPjicPOCY9K" Ids="SCY76sY1I9MNNDLBMtUjXI,PugaCozalHcMt4w4JPEM3y" />
+          <Link Id="OEOCeraE0DiOmQ8OnzSX5F" Ids="PugaCozalHcMt4w4JPEM3y,AzTwnkcSbF3NGI5sIwpIlA" IsHidden="true" />
+          <Link Id="PBUe7ChvKAJMEwZHDfCYDz" Ids="JR7jh2Ph4OfLuVnMRz6h7Q,HG34pIjDNDIMZHeNXcdN00" />
+          <Link Id="GcjCjyCs2I9OnHAvMhD2jd" Ids="HG34pIjDNDIMZHeNXcdN00,H8BWmNQH3kPMAB7evkiel6" />
+          <Link Id="TViDFUu4LHGNg0JuOZG72r" Ids="H8BWmNQH3kPMAB7evkiel6,PNPwo25PB5lLpoca6gEu6d" IsHidden="true" />
+          <Link Id="A0XLlQYyk51NVy3ukJWKOg" Ids="LM30mjnIkWXO5N36oIWf4j,Vs7Ra83EXZVLrH7RSIIixe" />
+          <Link Id="R12s74ied9fPUI7Aov8Amo" Ids="LEFijvbCz1sM9JtEA0k6gV,SCY76sY1I9MNNDLBMtUjXI" />
+          <Link Id="DtPJnT27q2jM6JMZt6yySd" Ids="P7AsafghWmoLCFBRUesJFs,FeK7JeplaB0Py65lD5mpao" />
+        </Patch>
+      </Node>
+    </Canvas>
+  </Patch>
+  <NugetDependency Id="Py55uSDwXGMQHoMgF5JGFZ" Location="Google.Apis" Version="1.34.0" />
+  <NugetDependency Id="ESvmgOuCTtHNx44Hjbx3mm" Location="Google.Apis.Auth" Version="1.34.0" />
+  <NugetDependency Id="Lk3OMFM8kOaMqxAFohVfae" Location="Google.Apis.Calendar.v3" Version="1.34.0.1244" />
+  <NugetDependency Id="JYOmdfQ8buwNHblDfuJP4F" Location="Google.Apis.Core" Version="1.34.0" />
+</Document>
