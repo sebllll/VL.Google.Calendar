@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" Version="0.87">
+<Document xmlns:p="property" Id="GB2VxUl5VdhM5rsl5IbjQg" Version="0.88">
   <NugetDependency Id="RKFCmk1Lg5EP3I4IQegLTw" Location="VL.CoreLib" Version="0.35.21" />
   <NugetDependency Id="U2JwHqMJLyGLDs97lM6eZ6" Location="VL.CoreLib.VVVV" Version="0.35.21" />
   <Patch Id="Th8hpfHvBF4Lk6VOwDCc9D">
-    <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="IO.gCal">
+    <Canvas Id="NtZT52Xp5qNOXK0fF2H7kv" DefaultCategory="VL.Google.Calendar">
       <!--
 
     ************************ FileDataStore ************************
@@ -17,10 +17,209 @@
         <p:TypeAnnotation LastCategoryFullName="Google.Apis.Util.Store" LastSymbolSource="Google.Apis.dll">
           <Choice Kind="TypeFlag" Name="FileDataStore" />
         </p:TypeAnnotation>
-        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">true</p:ForwardAllNodesOfTypeDefinition>
+        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
         <Patch Id="TkBOFU5tz39LdDJ0H2LzWH">
-          <Canvas Id="GAcaBso8jWKL7MsM1lqI2z" />
-          <ProcessDefinition Id="F2gxpSKr14bLGC4kY0cake" IsHidden="true" />
+          <Canvas Id="GAcaBso8jWKL7MsM1lqI2z">
+            <!--
+
+    ************************ GenerateStoredKey ************************
+
+-->
+            <Node Name="GenerateStoredKey" Bounds="294,187,100,50" Id="AQWR9RqCUPkNhBshw0nr7k">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="BTEWBQ9ZY4INHLZE5zGmvb">
+                <Node Bounds="294,187,10,10" AutoConnect="true" Id="GjqANU7P23rN3tnTGYBPSY">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Util.Store.FileDataStore" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="GenerateStoredKey" />
+                    <FullNameCategoryReference ID="Google.Apis.Util.Store.FileDataStore" />
+                  </p:NodeReference>
+                  <Pin Id="Ivt6yebkSTTPR6ay36Im8x" Name="Key" Kind="InputPin" />
+                  <Pin Id="FDnCVLn3NvUMmpXvYgMEWo" Name="T" Kind="InputPin" />
+                  <Pin Id="Egn4e33P0DsPaktLvYPLJW" Name="Output" Kind="OutputPin" />
+                </Node>
+                <Pin Id="OKMj15ONA6eMlTJshxmCef" Name="Key" Kind="InputPin" />
+                <Pin Id="O006AcyS1q9OBxai98oXOD" Name="T" Kind="InputPin" />
+                <Pin Id="JErrvr0ke9FOtEPmKyyWsp" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ FolderPath ************************
+
+-->
+            <Node Name="FolderPath" Bounds="574,187,100,50" Id="RaWIptHmPhtOZnZvhKAp9P">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="B4BXhmFtDeKMtTNt67fTUq">
+                <Node Bounds="574,187,10,10" AutoConnect="true" Id="CSfdLMYLHJcP38fQlMNgyC">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Util.Store.FileDataStore" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="FolderPath" />
+                    <FullNameCategoryReference ID="Google.Apis.Util.Store.FileDataStore" />
+                  </p:NodeReference>
+                  <Pin Id="Nz2ryxxuObLMCekXFm0FhV" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="UIcnEumkRY2MzF09cv7e1l" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="UcbdBuATci3PGinIZP49hT" Name="Folder Path" Kind="OutputPin" />
+                </Node>
+                <Pin Id="GN5fJnPNGHOMrR2PNiaTZH" Name="Input" Kind="InputPin" />
+                <Pin Id="SeTOnJp2ldpMYJmx1wHBQg" Name="Output" Kind="OutputPin" />
+                <Pin Id="FdwNuwnqByLMLoKn1G6ryz" Name="Folder Path" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Create ************************
+
+-->
+            <Node Name="Create" Bounds="294,337,100,50" Id="QtONqQnzo07L72t5yh0TCT">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="MbWmQG4tqNaQQBRc62OHRK">
+                <Node Bounds="294,337,10,10" AutoConnect="true" Id="NdxqpanDg3hPMmXUkxnilU">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Util.Store.FileDataStore" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="Create" />
+                    <FullNameCategoryReference ID="Google.Apis.Util.Store.FileDataStore" />
+                  </p:NodeReference>
+                  <Pin Id="VyIIft9TZKZNyqcQof3KRK" Name="Folder" Kind="InputPin" />
+                  <Pin Id="S9rLjHVaYpgPmxFicDLLPj" Name="Full Path" Kind="InputPin" />
+                  <Pin Id="ECQ0WCevErrPRSiLG47xEC" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="T7IN5E8PKfVNI2QNbiddCp" Name="Folder" Kind="InputPin" />
+                <Pin Id="DpW2ZuTvGMJQIrIr8yt4GW" Name="Full Path" Kind="InputPin" />
+                <Pin Id="U0RX5hQq3dQLpQqtYN7NOc" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ ClearAsync ************************
+
+-->
+            <Node Name="ClearAsync" Bounds="574,337,100,50" Id="QtoqAfzgXGhMnp9xG1zlpY">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Cp8wGxoYbgBPw8hfsAoROD">
+                <Node Bounds="574,337,10,10" AutoConnect="true" Id="N4sqkyZLnwSNFH3Jt6mkYI">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Util.Store.FileDataStore" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="ClearAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Util.Store.FileDataStore" />
+                  </p:NodeReference>
+                  <Pin Id="J1falCY6BSwPAJGYC3iiqw" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="CrxsDzI9SUoNL3s75JWiCE" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="N5bT10kxNQ5MI4DxixsspE" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Or23UbnFczSMQSS97iVcGe" Name="Input" Kind="InputPin" />
+                <Pin Id="ErasUyvjSaVMIdm5vlVrnL" Name="Output" Kind="OutputPin" />
+                <Pin Id="EqR5Dj8JwVeLjC8WHCHDQH" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ DeleteAsync ************************
+
+-->
+            <Node Name="DeleteAsync" Bounds="294,487,100,50" Id="UAkjAgKS0ktMmHG2wDyumy">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="BVhUue5a9DaOx5XmgXILle" IsGeneric="true">
+                <Node Bounds="294,487,10,10" AutoConnect="true" Id="J3qkDRxEp6APakyNgDukcc">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Util.Store.FileDataStore" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="DeleteAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Util.Store.FileDataStore" />
+                  </p:NodeReference>
+                  <Pin Id="TLYxIYz2LMwM99Hui3t511" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="AB1a9z3Tg6HMpIAelUu0mD" Name="Key" Kind="InputPin" />
+                  <Pin Id="MS8VQfaBGUhOF6ptor73t9" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="TlwHDoi4jQ0OShrIopLWEJ" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="MDuMUbontG1NzQjlcEC7OE" Name="Input" Kind="InputPin" />
+                <Pin Id="JAT3gorEYPuLWDHnvwY3dl" Name="Key" Kind="InputPin" />
+                <Pin Id="TwFg4xWJ1vXM6VwylS042H" Name="Output" Kind="OutputPin" />
+                <Pin Id="TJG18AxTtfSNCn5xT3jSXa" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ GetAsync ************************
+
+-->
+            <Node Name="GetAsync" Bounds="574,487,100,50" Id="RnLvhEfJ1GVM4Fw20NYgaV">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Liy7BZ1bZwoMTyEp9aZN4b" IsGeneric="true">
+                <Node Bounds="574,487,10,10" AutoConnect="true" Id="GqNmHGHZQ3VO2THMbbYHjv">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Util.Store.FileDataStore" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="GetAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Util.Store.FileDataStore" />
+                  </p:NodeReference>
+                  <Pin Id="FttFNWOrqZMQPKW2QmEZfG" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="GOPB8IP9np7NEbXdVjfiv3" Name="Key" Kind="InputPin" />
+                  <Pin Id="O2Xp3HDGkWFMMvxbLskskR" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="ISG6AInaSWIOH6rGIQ2Hmg" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="SilTzCVgCckLNFVJDsv6wN" Name="Input" Kind="InputPin" />
+                <Pin Id="FL82ooALKWjMbB4aJX5DID" Name="Key" Kind="InputPin" />
+                <Pin Id="OECYvkjAVjCNsuRpXJdijo" Name="Output" Kind="OutputPin" />
+                <Pin Id="UGT38yldQeiQTMYjn1BPyT" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ StoreAsync ************************
+
+-->
+            <Node Name="StoreAsync" Bounds="294,637,100,50" Id="S8lF6SWdfrlMCC4bAMfmux">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="RGM3SO4MhrAMslw8hGTXjc" IsGeneric="true">
+                <Node Bounds="294,637,10,10" AutoConnect="true" Id="BspRN37EuIxOF2v19pPHLU">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Util.Store.FileDataStore" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="StoreAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Util.Store.FileDataStore" />
+                  </p:NodeReference>
+                  <Pin Id="RhslStbk9ijMitj8znEsJp" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="GqojshcafGOLSFVecdXxWj" Name="Key" Kind="InputPin" />
+                  <Pin Id="N0vEtpYY6KWNjUWoRIx3np" Name="Value" Kind="InputPin" />
+                  <Pin Id="KlSFwvB3iwgLXQRw5ZZOgR" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="NfoPG9lIbKGOysCUQEU9c4" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="VVWwvMWQVPqL83Aj8xvNZY" Name="Input" Kind="InputPin" />
+                <Pin Id="GEJkpfD3E7QOTxGgutFs9d" Name="Key" Kind="InputPin" />
+                <Pin Id="BQ7WVgUik2yPyn2uOHXAxd" Name="Value" Kind="InputPin" />
+                <Pin Id="DHAyyikvgPhOe4W51cxFaw" Name="Output" Kind="OutputPin" />
+                <Pin Id="OWyEeJBI7NCNeMOeLLeWcM" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="F2gxpSKr14bLGC4kY0cake" IsHidden="true">
+            <Fragment Id="PUctcGb678wNdBjMkdpB5R" Patch="QtONqQnzo07L72t5yh0TCT" Enabled="true" />
+            <Fragment Id="U2eYzzFPqSSPXgN34m4FnV" Patch="RaWIptHmPhtOZnZvhKAp9P" />
+            <Fragment Id="Kx0C7oXsRRTNKayTx9PQB7" Patch="AQWR9RqCUPkNhBshw0nr7k" />
+            <Fragment Id="NyYlkl0lBiWPvqvaCsKNhj" Patch="QtoqAfzgXGhMnp9xG1zlpY" />
+            <Fragment Id="UcGa7WMoSOWNutgNXtAlQ0" Patch="UAkjAgKS0ktMmHG2wDyumy" />
+            <Fragment Id="LHYMzmr3zWrOIJXJMeWsE1" Patch="RnLvhEfJ1GVM4Fw20NYgaV" />
+            <Fragment Id="L9youtT2RPHO3PTbMMX4g4" Patch="S8lF6SWdfrlMCC4bAMfmux" />
+          </ProcessDefinition>
         </Patch>
       </Node>
       <!--
@@ -28,7 +227,7 @@
     ************************ CreateUserCredential ************************
 
 -->
-      <Node Name="CreateUserCredential" Category="IO.gCal" Bounds="520,268" Id="ECAC59LD4qLLYbe2QcskFZ">
+      <Node Name="CreateUserCredential" Bounds="520,268" Id="ECAC59LD4qLLYbe2QcskFZ">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
@@ -57,9 +256,8 @@
                 <Patch Id="VK4qUdIvnqVLWwmCI4VqrV" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="MOUR0HzWcwWLzckrxE6fwe" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="826,621,100,22" Id="Cb9pl1BrpTyNyBTYgP1fMZ">
-                  <p:NodeReference LastCategoryFullName="IO.gCal.FileDataStore" LastSymbolSource="VVVV.IO.gCal.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Google.Calendar.FileDataStore" LastSymbolSource="VL.Google.Calendar.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                    <CategoryReference Kind="Category" Name="gCal" />
                     <Choice Kind="OperationCallFlag" Name="Create" />
                     <CategoryReference Kind="ClassType" Name="FileDataStore" NeedsToBeDirectParent="true" />
                   </p:NodeReference>
@@ -270,9 +468,195 @@
         <p:TypeAnnotation LastCategoryFullName="Google.Apis.Auth.OAuth2" LastSymbolSource="Google.Apis.Auth.dll">
           <Choice Kind="TypeFlag" Name="GoogleWebAuthorizationBroker" />
         </p:TypeAnnotation>
+        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
         <Patch Id="IrS2kEYfT9rQCATBKoEqg8">
-          <Canvas Id="UCRTMom2rrDMpxBaTnFZOW" />
-          <ProcessDefinition Id="LAvzYCQOHFkQQWKqwn1mZj" IsHidden="true" />
+          <Canvas Id="UCRTMom2rrDMpxBaTnFZOW">
+            <!--
+
+    ************************ Folder ************************
+
+-->
+            <Node Name="Folder" Bounds="254,191,100,50" Id="EgjQiURgjbdPuHeYBOUfJW">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Anq7xLPawlPN0bnFkblNOe">
+                <Node Bounds="254,191,10,10" AutoConnect="true" Id="I46QeGLC6g5PbJfVdYBKxx">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="OperationNode" Name="Folder" />
+                    <FullNameCategoryReference ID="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" />
+                  </p:NodeReference>
+                  <Pin Id="CQHjy8gEkmjNAOaX4TYg0x" Name="Folder" Kind="OutputPin" />
+                </Node>
+                <Pin Id="VygXDSaRgG9L4Dcwc6KpTL" Name="Folder" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ AuthorizeAsync ************************
+
+-->
+            <Node Name="AuthorizeAsync" Bounds="534,191,100,50" Id="HoegrZXqHm2MQ6MGxao8j2">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="VGydch74zhpPYpRNjFYX9s">
+                <Node Bounds="534,191,10,10" AutoConnect="true" Id="PS4heJV4IwRM3mSfhBHXqe">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="OperationNode" Name="AuthorizeAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" />
+                    <PinReference Kind="InputPin" Name="Initializer" />
+                  </p:NodeReference>
+                  <Pin Id="DXJqbAZt9BnLs3r2vAd5K5" Name="Initializer" Kind="InputPin" />
+                  <Pin Id="C4aQIyNhnRANCMZAK8TVSI" Name="Scopes" Kind="InputPin" />
+                  <Pin Id="KvkyuoN8XWoOcrxVQ7lFvH" Name="User" Kind="InputPin" />
+                  <Pin Id="GfH7ZffHuxVLTa8SBJDX5I" Name="Task Cancellation Token" Kind="InputPin" />
+                  <Pin Id="GTTWqhVnETfM4FihnY9FlE" Name="Data Store" Kind="InputPin" />
+                  <Pin Id="Dpv6f8naSt4NJwAp4mdc1h" Name="Code Receiver" Kind="InputPin" />
+                  <Pin Id="Shoi5rruZXwPRAVBuhblai" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="AzhhVnp8YaOLXjCM0szaJv" Name="Initializer" Kind="InputPin" />
+                <Pin Id="Rifb0bWOtrdOdsY6eXo19d" Name="Scopes" Kind="InputPin" />
+                <Pin Id="PjgWRPD4iYdLXNgnq3krhR" Name="User" Kind="InputPin" />
+                <Pin Id="CJnJ81wim5WPoZBUTonpQh" Name="Task Cancellation Token" Kind="InputPin" />
+                <Pin Id="K8IagvTBmq3NHqXfIMblt1" Name="Data Store" Kind="InputPin" />
+                <Pin Id="Ni2U51NNfcDQSjgWSkwqBd" Name="Code Receiver" Kind="InputPin" />
+                <Pin Id="NpfuuudRRYwNNZmpS2Hvn1" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ AuthorizeAsync ************************
+
+-->
+            <Node Name="AuthorizeAsync" Bounds="254,341,100,50" Id="CV8gtK5uNH8LkkAMrtprJc">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="MNKeXwW3x6LM5GiAIjc4LI">
+                <Node Bounds="254,341,10,10" AutoConnect="true" Id="CkOCS6xwYhcOHg9iXBN6VC">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="OperationNode" Name="AuthorizeAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" />
+                    <PinReference Kind="InputPin" Name="Client Secrets Stream" />
+                  </p:NodeReference>
+                  <Pin Id="L2TC72DckaaNGlIoaQZ0Db" Name="Client Secrets Stream" Kind="InputPin" />
+                  <Pin Id="Dc0zKtFh8fqLCNvt5LpwcH" Name="Scopes" Kind="InputPin" />
+                  <Pin Id="N4e4AGVN8VaNiveBXsiDAa" Name="User" Kind="InputPin" />
+                  <Pin Id="PaF0dB8BPh7MsfRiHh7mR2" Name="Task Cancellation Token" Kind="InputPin" />
+                  <Pin Id="LZxwpCitXh0MKOADePE81u" Name="Data Store" Kind="InputPin" />
+                  <Pin Id="UUVKoV1l9seO4sjBBhTmPf" Name="Code Receiver" Kind="InputPin" />
+                  <Pin Id="OrxR3VSEKrPPMvPOw1xxFw" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Gk25MdAZ2moOPVAaiWxbgm" Name="Client Secrets Stream" Kind="InputPin" />
+                <Pin Id="A5lSxwZkBbEOPFlSTWNk06" Name="Scopes" Kind="InputPin" />
+                <Pin Id="C1pXf6p4IibL27xI9F6dM6" Name="User" Kind="InputPin" />
+                <Pin Id="T3F62TRI4nNQOae75cAIfe" Name="Task Cancellation Token" Kind="InputPin" />
+                <Pin Id="OP0SivwBjdkOnNJlKrnSl7" Name="Data Store" Kind="InputPin" />
+                <Pin Id="BERq0bEvPPJPp2bpT2ADVI" Name="Code Receiver" Kind="InputPin" />
+                <Pin Id="AwWUP2xOEGfMqwsGsIoiPZ" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ AuthorizeAsync ************************
+
+-->
+            <Node Name="AuthorizeAsync" Bounds="534,341,100,50" Id="UOMSdqwMJWtP1g6iSBE0sf">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="CQyYuXitL45NaOtSkRdyoQ">
+                <Node Bounds="534,341,10,10" AutoConnect="true" Id="MdOSgjyd2rmMQ31DDI3xny">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="OperationNode" Name="AuthorizeAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" />
+                    <PinReference Kind="InputPin" Name="Client Secrets" />
+                  </p:NodeReference>
+                  <Pin Id="AtYWMpxGGGDOBLAH7oimRs" Name="Client Secrets" Kind="InputPin" />
+                  <Pin Id="HyjcWFYM07mODW1LcP3xPL" Name="Scopes" Kind="InputPin" />
+                  <Pin Id="DMTLPKH8XicPVgGf0FuNbH" Name="User" Kind="InputPin" />
+                  <Pin Id="LmlTv2WghcbNVvEswd4YW1" Name="Task Cancellation Token" Kind="InputPin" />
+                  <Pin Id="U6slu81PhiqPqtdRj4dMl3" Name="Data Store" Kind="InputPin" />
+                  <Pin Id="M2nK2IorqcyM8kugrZWuSA" Name="Code Receiver" Kind="InputPin" />
+                  <Pin Id="PLzOHmYBEf2QT9E9fyP6PY" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Ikkb4BjDkNdOmbuNM04gfk" Name="Client Secrets" Kind="InputPin" />
+                <Pin Id="BzIK6jQ54tuLxCoUU0lnBZ" Name="Scopes" Kind="InputPin" />
+                <Pin Id="Q2sbdkiBlFiPNXMbHiHEzF" Name="User" Kind="InputPin" />
+                <Pin Id="Ei5R9xwCOrSNX9KRjBet1M" Name="Task Cancellation Token" Kind="InputPin" />
+                <Pin Id="Ri7fuy8lYfRN7YkpZ9KG6s" Name="Data Store" Kind="InputPin" />
+                <Pin Id="PpoNXgaerwJPJTbAHcVn9K" Name="Code Receiver" Kind="InputPin" />
+                <Pin Id="HqKImhoDXhpPwpqn8TTwbH" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ ReauthorizeAsync ************************
+
+-->
+            <Node Name="ReauthorizeAsync" Bounds="254,491,100,50" Id="NiIF1QYwygFP5WO8bYlzsP">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="GXoc7FaPdbCPvRyPr9HqeW">
+                <Node Bounds="254,491,10,10" AutoConnect="true" Id="Hkt49wvPdlgOi8vA4g9vzN">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="OperationNode" Name="ReauthorizeAsync" />
+                    <FullNameCategoryReference ID="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" />
+                  </p:NodeReference>
+                  <Pin Id="URydl3PYkXPPP64fkjrKr7" Name="User Credential" Kind="InputPin" />
+                  <Pin Id="EGDVO8tdNXUQNEL1iRpDhj" Name="Task Cancellation Token" Kind="InputPin" />
+                  <Pin Id="OPpj83TPTnrL0dSnKyvu4w" Name="Code Receiver" Kind="InputPin" />
+                  <Pin Id="M2cSgaUkxbbLXqUHaCxt5d" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Uy2Ks5D9ebkOd4oSccRqgs" Name="User Credential" Kind="InputPin" />
+                <Pin Id="Qie11H9Ag6IM2nZy3iy2fM" Name="Task Cancellation Token" Kind="InputPin" />
+                <Pin Id="IHPaZ0CuPPAODsFNd5Vi3x" Name="Code Receiver" Kind="InputPin" />
+                <Pin Id="NZTHle6oyt9MlozuaNhDBU" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Create ************************
+
+-->
+            <Node Name="Create" Bounds="534,491,100,50" Id="B8pHTtO0YxqLEUgjU3PYqw">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="RUrELoQBzHXMSQ6SNfr8BR">
+                <Node Bounds="534,491,10,10" AutoConnect="true" Id="HII9d6rpzfKOfYAi8l8ETb">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" LastSymbolSource="Google.Apis.Auth.dll">
+                    <Choice Kind="OperationNode" Name="Create" />
+                    <FullNameCategoryReference ID="Google.Apis.Auth.OAuth2.GoogleWebAuthorizationBroker" />
+                  </p:NodeReference>
+                  <Pin Id="DJY20KbHFYrPzsozfpZ0xQ" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="VkQKX7nbCeLLw9OlF53NJy" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="LAvzYCQOHFkQQWKqwn1mZj" IsHidden="true">
+            <Fragment Id="GBIT9Cc4RKaO88m8A1vTFB" Patch="B8pHTtO0YxqLEUgjU3PYqw" Enabled="true" />
+            <Fragment Id="F079PyxNY2sO7LCbF4Y523" Patch="HoegrZXqHm2MQ6MGxao8j2" />
+            <Fragment Id="HuW1itC0QI4QW0HFCVwUf3" Patch="CV8gtK5uNH8LkkAMrtprJc" />
+            <Fragment Id="CJDTqtwrDmBMck4MYj1Pcw" Patch="UOMSdqwMJWtP1g6iSBE0sf" />
+            <Fragment Id="S8HeLTeU7DJNSP4UewIVuv" Patch="NiIF1QYwygFP5WO8bYlzsP" />
+            <Fragment Id="OKJ3O1rwrU4QKpREyXSI2q" Patch="EgjQiURgjbdPuHeYBOUfJW" />
+          </ProcessDefinition>
         </Patch>
       </Node>
       <!--
@@ -280,7 +664,7 @@
     ************************ GoogleCalendar_Test ************************
 
 -->
-      <Node Name="GoogleCalendar_Test" Category="VVVV.Google.Calendar" Bounds="140,479" Id="E8T06bMxny9NJ7kHy5XIUX">
+      <Node Name="GoogleCalendar_Test" Category="VVVV.Google.Calendar" Bounds="134,537" Id="E8T06bMxny9NJ7kHy5XIUX">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
@@ -356,7 +740,7 @@
                 <Patch Id="Gy2KRieagXrNQRfnoRooaP" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="P6osgBmph41PzpGxKX3s4V" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="322,1041,195,383" Id="SFmVCmbczFxNjEdUBGJaC0">
-                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Google.Calendar" LastSymbolSource="VL.Google.Calendar.vl">
                     <Choice Kind="ProcessAppFlag" Name="GetEventDetails" />
                     <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                   </p:NodeReference>
@@ -448,7 +832,7 @@
                   <Pin Id="EzYGo9D0W98OTYB1anobSF" Name="Output" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="322,565,256,442" Id="KhCLb0nRhM1N2ZaFGwS3S9">
-                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Google.Calendar" LastSymbolSource="VL.Google.Calendar.vl">
                     <Choice Kind="ProcessAppFlag" Name="SetupListRequest" />
                     <Choice Kind="RegionFlag" Name="Region (Stateless)" Fixed="true" />
                   </p:NodeReference>
@@ -693,13 +1077,11 @@
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
                 <CategoryReference Kind="Category" Name="Primitive" />
               </p:NodeReference>
-              <Pin Id="SviPQF2hoeuLvyDpUusfeB" Name="Force" Kind="InputPin" />
-              <Pin Id="RBzYTV3hYaSPyuca0KtPXO" Name="Has Changed" Kind="OutputPin" />
               <Patch Id="RX9q0QapzpxNrgdp5NJj5A" ManuallySortedPins="true">
                 <Patch Id="C0P9RE22FmMPycEPWbreYl" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="MNlnVhxnnE7OiugeYS3was" Name="Then" ManuallySortedPins="true" />
                 <Node Bounds="323,74,124,13" Id="PEL2ErpIoLTQYRhHPTZaLc">
-                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Google.Calendar" LastSymbolSource="VL.Google.Calendar.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="CreateUserCredential" />
                   </p:NodeReference>
@@ -708,7 +1090,7 @@
                   <Pin Id="GE9r3pYtuNvOpRhChOAuuS" Name="UserCredential" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="154,158,174,20" Id="RTisI62hgCyPELKERj0lEG">
-                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Google.Calendar" LastSymbolSource="VL.Google.Calendar.vl">
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                     <Choice Kind="ProcessNode" Name="Initialize" />
                   </p:NodeReference>
@@ -732,7 +1114,7 @@
                   <Pin Id="FwhmgNSIafXN1uvPw54VnP" Name="Result" Kind="OutputPin" />
                 </Node>
                 <Node Bounds="-22,196,88,13" Id="Khk7XfjnqRuNXLp0oNXW3r">
-                  <p:NodeReference LastCategoryFullName="IO.gCal" LastSymbolSource="VL.Google.Calendar.vl">
+                  <p:NodeReference LastCategoryFullName="VL.Google.Calendar" LastSymbolSource="VL.Google.Calendar.vl">
                     <Choice Kind="ProcessAppFlag" Name="ListCalendars" />
                     <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   </p:NodeReference>
@@ -749,6 +1131,9 @@
               <ControlPoint Id="DM8BlWQY7t9LviEPo4Vp99" Bounds="24,244" Alignment="Bottom" />
               <ControlPoint Id="AVOPjnWeIaKO5ml42cMFwl" Bounds="-19,244" Alignment="Bottom" />
               <ControlPoint Id="Shr6zIwmrUzQZNizKIsnQr" Bounds="107,244" Alignment="Bottom" />
+              <Pin Id="SviPQF2hoeuLvyDpUusfeB" Name="Force" Kind="InputPin" />
+              <Pin Id="B4LyVA9qIimMGEzvMfrxoM" Name="Dispose Old Instances" Kind="InputPin" />
+              <Pin Id="RBzYTV3hYaSPyuca0KtPXO" Name="Has Changed" Kind="OutputPin" />
             </Node>
             <ControlPoint Id="HoT0Uych1ILLHppjRLC8ls" Bounds="-22,277" />
             <ControlPoint Id="Gcm1mphvheJLNbFoUhB4sV" Bounds="22,277" />
@@ -884,9 +1269,499 @@
         <p:TypeAnnotation LastCategoryFullName="Google.Apis.Services" LastSymbolSource="Google.Apis.dll">
           <Choice Kind="TypeFlag" Name="BaseClientService" />
         </p:TypeAnnotation>
+        <p:ForwardAllNodesOfTypeDefinition p:Type="Boolean">false</p:ForwardAllNodesOfTypeDefinition>
         <Patch Id="SC2bivrMiiRO1XmzuzszDg">
-          <Canvas Id="FiWSmFOUoW3NTyRq2ljzi6" />
-          <ProcessDefinition Id="LBquqHbFhr2QKu4H4Tp1Hh" IsHidden="true" />
+          <Canvas Id="FiWSmFOUoW3NTyRq2ljzi6">
+            <!--
+
+    ************************ DefaultMaxUrlLength ************************
+
+-->
+            <Node Name="DefaultMaxUrlLength" Bounds="240,118,100,50" Id="HQP3r1K8RPAQFFSvtp8g1u">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="LPq31yHCLubOusm3K4iMWx">
+                <Node Bounds="240,118,10,10" AutoConnect="true" Id="BMP5dK3tSOaLnO0AiAHoQp">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="DefaultMaxUrlLength" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="DPey7pOtwepNakz8yeH3q4" Name="Default Max Url Length" Kind="OutputPin" />
+                </Node>
+                <Pin Id="J1YDP3EEQ8DNtmPR9xfFS8" Name="Default Max Url Length" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ ApiKey ************************
+
+-->
+            <Node Name="ApiKey" Bounds="520,118,100,50" Id="KR2GMSTnYZlM48qGBWivc4">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="TAp6PMdsWmINtKJbfonbBR">
+                <Node Bounds="520,118,10,10" AutoConnect="true" Id="GmEDUra8gcaLRwWzM7f7VL">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="ApiKey" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="Rsg23YQKzUyLw7jyprv4X1" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DxCkna6EhLTPkG4IWrsaC1" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="OC3w3RmTXStL3JhXUqj28l" Name="Api Key" Kind="OutputPin" />
+                </Node>
+                <Pin Id="TU0QDSguwrLLuoZyDw58Wm" Name="Input" Kind="InputPin" />
+                <Pin Id="UlQxMHgeZFCOPByeDoBpTd" Name="Output" Kind="OutputPin" />
+                <Pin Id="Sb46TfyY5l1NHe4YaAPUAR" Name="Api Key" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ ApplicationName ************************
+
+-->
+            <Node Name="ApplicationName" Bounds="800,118,100,50" Id="LAgnNnuLgqzMLXM74m0dLr">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="RwZLnPHcgDjQYI3ARyrA9Q">
+                <Node Bounds="800,118,10,10" AutoConnect="true" Id="BHqKcVK0rJRMDE9RWfRJZa">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="ApplicationName" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="T2ZJAN5qNlDPMrjs4M7iCQ" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="MkHUTtiQMqyLcBwZ49R7gT" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="RZW4w9FYHA9MBpUfujXQih" Name="Application Name" Kind="OutputPin" />
+                </Node>
+                <Pin Id="CtdaXpIIPl7Ox4xhqTPBpB" Name="Input" Kind="InputPin" />
+                <Pin Id="ScVH60GDT2cM7TrBvxcwvA" Name="Output" Kind="OutputPin" />
+                <Pin Id="Kkfl4Bg8ppvQcj0GF562Nd" Name="Application Name" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ BasePath ************************
+
+-->
+            <Node Name="BasePath" Bounds="1080,118,100,50" Id="OUAxLB1fkqUL3zWsz4IFTG">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="HfxrxIxt85mL8nfqGGqEbm">
+                <Node Bounds="1080,118,10,10" AutoConnect="true" Id="IiWU9rcslSTNeidieIdy7q">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="BasePath" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="DxVZUM3FoWHOkgzcHyheke" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="R0EJvzxQOr5PFca1RHU7BY" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="ONHU4OZT0ugLp58dKDOboI" Name="Base Path" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Sd6NV1kXYZ1QaY0QLtKtni" Name="Input" Kind="InputPin" />
+                <Pin Id="K32lywWwyXGO5JY0SNlPlH" Name="Output" Kind="OutputPin" />
+                <Pin Id="BTTRSBBb6FKMg7GTv2Ayic" Name="Base Path" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ BaseUri ************************
+
+-->
+            <Node Name="BaseUri" Bounds="240,268,100,50" Id="TSuSkILYpf1OTNJc5IkAN7">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="T610mjd7vGBLawbxikbAPI">
+                <Node Bounds="240,268,10,10" AutoConnect="true" Id="TDJ09qrzzq3MSqksbrbXio">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="BaseUri" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="OQYnxH4zG3SNrDNK76nkPs" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="ENJnqk31vBJMgLFFypLGFZ" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="IuyQwsM1auoPsWOgKySFrG" Name="Base Uri" Kind="OutputPin" />
+                </Node>
+                <Pin Id="H8kneCwekL5NbcuiD00t91" Name="Input" Kind="InputPin" />
+                <Pin Id="A1lglpTwflEPXTBBu0S3KS" Name="Output" Kind="OutputPin" />
+                <Pin Id="VM11r2bN1oAObnw5CpDoQC" Name="Base Uri" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ BatchPath ************************
+
+-->
+            <Node Name="BatchPath" Bounds="520,268,100,50" Id="T6VnpxFXMLvLfLXcsFvDv0">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="VSuUrjGVKY0Pn6vl23RCP3">
+                <Node Bounds="520,268,10,10" AutoConnect="true" Id="VxWgQovcIZIMae2dAKjZEC">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="BatchPath" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="PCbWqjIpiFyNubzdCJUYWC" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DXn0k3QZSj1O0cEbzVQa3C" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="PM3zOzRrWroOfeS9zc4cUh" Name="Batch Path" Kind="OutputPin" />
+                </Node>
+                <Pin Id="S3wcrRkBuj6OyxZohxq1eV" Name="Input" Kind="InputPin" />
+                <Pin Id="EMoy4sB78PAMuSHG7y6Div" Name="Output" Kind="OutputPin" />
+                <Pin Id="Crn11hg0lDBMmzKNteXpte" Name="Batch Path" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ BatchUri ************************
+
+-->
+            <Node Name="BatchUri" Bounds="800,268,100,50" Id="PnOxC3HYgQeLdpG2VrYYa5">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="K9vmPgnOrkjQWKpV1A7J73">
+                <Node Bounds="800,268,10,10" AutoConnect="true" Id="PdGy7KFVuisLvMKVlLV3l7">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="BatchUri" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="CrQBCpWUnY3OrULKsu61DG" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="LrDO8yAV6NjMS3e2K9Yg8K" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="CliVdCbUNnULbZe0GEvnLd" Name="Batch Uri" Kind="OutputPin" />
+                </Node>
+                <Pin Id="VWE4GKt49IZOaa7buaR7Qp" Name="Input" Kind="InputPin" />
+                <Pin Id="EfFYGy3KVz0PNjdHWJJLYn" Name="Output" Kind="OutputPin" />
+                <Pin Id="TfKGrvIkFxdPHuFWWYKuMD" Name="Batch Uri" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Features ************************
+
+-->
+            <Node Name="Features" Bounds="1080,268,100,50" Id="CFY2MTPsyuuPcWKXaCC9qP">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Twwe4asg4L3MfmYMa8GeIh">
+                <Node Bounds="1080,268,10,10" AutoConnect="true" Id="KRUeKD32zz6MKmwMlk5GAS">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="Features" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="J1wM5HeGkXaNrPbJCuWCSH" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="NJdZ9jAYqYrMb6ttyIig58" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="NBDSGuXKEJxLL3Gdi2tlOz" Name="Features" Kind="OutputPin" />
+                </Node>
+                <Pin Id="BlAjlxYCQ1iL21h4aFzADN" Name="Input" Kind="InputPin" />
+                <Pin Id="T4e9Ie4mMAKPXwwCOKw5RJ" Name="Output" Kind="OutputPin" />
+                <Pin Id="Dwmg967QI5tQXpguTo5aji" Name="Features" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ GZipEnabled ************************
+
+-->
+            <Node Name="GZipEnabled" Bounds="240,418,100,50" Id="JTxsVPY2asONQWDRk7dXkq">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="VayEPSUbABgPaEmPZgcP2U">
+                <Node Bounds="240,418,10,10" AutoConnect="true" Id="NvUodYIHHr4MDn1k0FzmAI">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="GZipEnabled" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="Id3iwdlBNq5QXek72pLeTP" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="FPsf5AG12EBN4fqxfhDCUn" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="RwQDAratvA7LqWeVmwbtUU" Name="GZip Enabled" Kind="OutputPin" />
+                </Node>
+                <Pin Id="DnEzjZ4T6NzNkjkGYahCf8" Name="Input" Kind="InputPin" />
+                <Pin Id="RfnIaf5SoETOk729q0zKVY" Name="Output" Kind="OutputPin" />
+                <Pin Id="IN1SzfgOYWmPPuXo3x9bMK" Name="GZip Enabled" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ HttpClient ************************
+
+-->
+            <Node Name="HttpClient" Bounds="520,418,100,50" Id="KkfUI1FXgDOPWCSnZ93gVl">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="MlH8PHIobTdNo3AoWLDCX4">
+                <Node Bounds="520,418,10,10" AutoConnect="true" Id="NK7lZlh4caaNvO6XvUAuWw">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="HttpClient" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="Kk8M4FUp653MU7UqhEu21U" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="SWJTvjF8x6hQWd4eoWXgTu" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="IZKHoUVevZiLzyB8Yi7ASE" Name="Http Client" Kind="OutputPin" />
+                </Node>
+                <Pin Id="NlgekwtZrrtNYMimG1FVhj" Name="Input" Kind="InputPin" />
+                <Pin Id="MK6AiGFruPvMzIvWW5Hwtm" Name="Output" Kind="OutputPin" />
+                <Pin Id="QJ8ojrCkp2pMScRh8gT1z0" Name="Http Client" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ HttpClientInitializer ************************
+
+-->
+            <Node Name="HttpClientInitializer" Bounds="800,418,100,50" Id="Fkaz3CNtcF6OAvp4FssF4z">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="HbL8EDgaL7HPSmIJNNprKP">
+                <Node Bounds="800,418,10,10" AutoConnect="true" Id="Qbs7TKQb6iAP3w0dlbOGDP">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="HttpClientInitializer" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="KSiaqrahcEhQHeejFqcob6" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="CgzSwYYR5vPNMt1fBHzbGZ" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="VwdbGGWsZ0SQUNqldl6NC4" Name="Http Client Initializer" Kind="OutputPin" />
+                </Node>
+                <Pin Id="GYTU1k0A97JNTDKRJztqG7" Name="Input" Kind="InputPin" />
+                <Pin Id="DFkFHzx2VPSO9A4z2cuJ8r" Name="Output" Kind="OutputPin" />
+                <Pin Id="UAQFXttgcq7Oat4V2a2SCe" Name="Http Client Initializer" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Name ************************
+
+-->
+            <Node Name="Name" Bounds="1080,418,100,50" Id="KZYC0Zd6wXaLRotq2oApFg">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Gm6HlElbH7oO70ZWcysRby">
+                <Node Bounds="1080,418,10,10" AutoConnect="true" Id="HtZ5hZkcfwxLVmmo0Rb7wZ">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="Name" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="KM3j80xUSGgON3KFiOVany" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="BjKMETv7ktUMMzYJGATd87" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="DXKQo8hJPXwN8aIE7vN98X" Name="Name" Kind="OutputPin" />
+                </Node>
+                <Pin Id="Mz7hNYXWZ7aMco2pUTTYgv" Name="Input" Kind="InputPin" />
+                <Pin Id="UQAp1TjPDdlMoXc0dSNK5Y" Name="Output" Kind="OutputPin" />
+                <Pin Id="Fo0lBdd7Kc4MhRsHeObItP" Name="Name" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Serializer ************************
+
+-->
+            <Node Name="Serializer" Bounds="240,568,100,50" Id="BOujNlHdA8TQdBXPHCDuZW">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="QwctZx2ErTdMQPoFm4h4Uy">
+                <Node Bounds="240,568,10,10" AutoConnect="true" Id="VaxHgwckHtkMMzyoed8iWM">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="Serializer" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="NzTB1fEGKuMNxvhkFTqela" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="Ol4HGsnc0F5PV5xoFTHLbF" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="VTmal0bkDUMLgQRAYozQju" Name="Serializer" Kind="OutputPin" />
+                </Node>
+                <Pin Id="IeXYWqFs1eBMKzeRPupQcU" Name="Input" Kind="InputPin" />
+                <Pin Id="TfbSVwPsqgXMtcYAPvKXD3" Name="Output" Kind="OutputPin" />
+                <Pin Id="CwdCjXaZIOPPfj62eJIHfY" Name="Serializer" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ DeserializeError ************************
+
+-->
+            <Node Name="DeserializeError" Bounds="520,568,100,50" Id="RPpxLVzgQA1K9XqcVUm3gP">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="T25q5Dc6gxTPAaoaNkFkrp">
+                <Node Bounds="520,568,10,10" AutoConnect="true" Id="EnpdEWSfC7TMuOsN1FSsZA">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="DeserializeError" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="FNbjGHJUpGaLRZtnkQ6IWR" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="KMMwyxmhltXNf2E0z6Q4TU" Name="Response" Kind="InputPin" />
+                  <Pin Id="AuYQg3JgJzUOqYwPBmXvsN" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="U4G58mPq46BMPOCSTCclq5" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="RMXJqA7nuItLTvC63dWOkJ" Name="Input" Kind="InputPin" />
+                <Pin Id="TKtzOGmhqhHMLhWZfsVbOj" Name="Response" Kind="InputPin" />
+                <Pin Id="LSaR3L7ZqPuLqTFQsQQJ1F" Name="Output" Kind="OutputPin" />
+                <Pin Id="P4VqWqm8A31LzVPARRxcgN" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ DeserializeResponse ************************
+
+-->
+            <Node Name="DeserializeResponse" Bounds="800,568,100,50" Id="Kdiq4wBsBCSM4OCI762u6J">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="LSwWA8lefQFOJ4PnUdpOds" IsGeneric="true">
+                <Node Bounds="800,568,10,10" AutoConnect="true" Id="LB4eVUXwYZlOi0ARYWv8Sh">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="DeserializeResponse" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="E0oinMA9aOdNuc8DnCzxSb" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="B96fEaB7F0lLMPiv5mVDCx" Name="Response" Kind="InputPin" />
+                  <Pin Id="RCFZmilr14rMyqJmuAil82" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="IpbSuNDNvtBLiW9o8L1Erk" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="QSgimM0dxySL8bUPM7r7Gb" Name="Input" Kind="InputPin" />
+                <Pin Id="FdK6jMFpGDtQG9jImOx0O2" Name="Response" Kind="InputPin" />
+                <Pin Id="U5Hyw9N1TSQMhqI5TDhesA" Name="Output" Kind="OutputPin" />
+                <Pin Id="SIQQmafMusaODMcuuTkwjh" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ Dispose ************************
+
+-->
+            <Node Name="Dispose" Bounds="1080,568,100,50" Id="DcxDcwt4l2ML1Sw6ww3zQx">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="Ffcd0Nx4palMzjlAoZl8Np">
+                <Node Bounds="1080,568,10,10" AutoConnect="true" Id="ThJgXVFL1q3NKtS43daw6D">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="Dispose" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="SHt0yErrbaxOycznhkKH1J" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="RODG92rhMQQLgTWualAdvO" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="Vs5yiEhfuKJMIl191hW54Q" Name="Input" Kind="InputPin" />
+                <Pin Id="VM8zlvcT9BHMFXTNHsoPTY" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ SerializeObject ************************
+
+-->
+            <Node Name="SerializeObject" Bounds="240,718,100,50" Id="HIXwUOFNiGiP3qJvdq3nYo">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="N9oeh1TqqVJPMLHaNANvtj">
+                <Node Bounds="240,718,10,10" AutoConnect="true" Id="Ll7iI7ba5xCNdUeigvleAE">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="SerializeObject" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="OKdk1sLk9tZMAVBSMUhnMh" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="T3YCpYal8jhPbjqmF4JaVp" Name="Obj" Kind="InputPin" />
+                  <Pin Id="R3mRPLURYRuMyRFbv4DLDI" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="OmXkeKWN9lnO6gpyqOfx9h" Name="Result" Kind="OutputPin" />
+                </Node>
+                <Pin Id="QSlbbKDhO9jMCjn0pncVYc" Name="Input" Kind="InputPin" />
+                <Pin Id="P82VXAEvRg6LPWUnnf2Pgg" Name="Obj" Kind="InputPin" />
+                <Pin Id="IK5zzaS2DocL5GO39MBJAx" Name="Output" Kind="OutputPin" />
+                <Pin Id="EQ6FWm74vSFL4aDAVarVCD" Name="Result" Kind="OutputPin" />
+              </Patch>
+            </Node>
+            <!--
+
+    ************************ SetRequestSerailizedContent ************************
+
+-->
+            <Node Name="SetRequestSerailizedContent" Bounds="520,718,100,50" Id="DQdOlQFFBDjLNdXHEnsZCi">
+              <p:NodeReference>
+                <Choice Kind="OperationDefinition" Name="Operation" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <p:HideCategory p:Type="Boolean">false</p:HideCategory>
+              <Patch Id="UUVH3ZDATLHPyAKXIYwRs0">
+                <Node Bounds="520,718,10,10" AutoConnect="true" Id="EkgMc0RJ910MnBjA7pJOdm">
+                  <p:NodeReference LastCategoryFullName="Google.Apis.Services.BaseClientService" LastSymbolSource="Google.Apis.dll">
+                    <Choice Kind="OperationNode" Name="SetRequestSerailizedContent" />
+                    <FullNameCategoryReference ID="Google.Apis.Services.BaseClientService" />
+                  </p:NodeReference>
+                  <Pin Id="F72cdOeqpGZMn6piNauQRR" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="NvvVUbZ1tGTLerZL61A8mt" Name="Request" Kind="InputPin" />
+                  <Pin Id="BqMUVJtslM3N96fE34MwKF" Name="Body" Kind="InputPin" />
+                  <Pin Id="NDksGU5n4EROCu8J4PzfqV" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Pin Id="PDrFPn2osImQHcrnxaw4UV" Name="Input" Kind="InputPin" />
+                <Pin Id="TojivdtV3t2MuL1GqgJKLd" Name="Request" Kind="InputPin" />
+                <Pin Id="DiowC1XwvHPNvkDo5kHB5d" Name="Body" Kind="InputPin" />
+                <Pin Id="M8OQv7mVboaNqXfEQTziMz" Name="Output" Kind="OutputPin" />
+              </Patch>
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="LBquqHbFhr2QKu4H4Tp1Hh" IsHidden="true">
+            <Fragment Id="HGCIxbCTVW2MuB460SzKkX" Patch="HQP3r1K8RPAQFFSvtp8g1u" />
+            <Fragment Id="QQtOhBryX4XOYuVEvtm3nI" Patch="KR2GMSTnYZlM48qGBWivc4" />
+            <Fragment Id="G0xDNsbkbtrLrDTPWkf3Y6" Patch="LAgnNnuLgqzMLXM74m0dLr" />
+            <Fragment Id="Cr5dAdMDHwBMEAlBp0sPEi" Patch="OUAxLB1fkqUL3zWsz4IFTG" />
+            <Fragment Id="NzlNYVgkq5OMe3rDh8XjXH" Patch="TSuSkILYpf1OTNJc5IkAN7" />
+            <Fragment Id="QysxsuAWZPqQOWfDaQqWKK" Patch="T6VnpxFXMLvLfLXcsFvDv0" />
+            <Fragment Id="KS8TXHWAGWZMxktPQQGKtm" Patch="PnOxC3HYgQeLdpG2VrYYa5" />
+            <Fragment Id="Aj3FUV0hOMWMRcveOFXPX2" Patch="CFY2MTPsyuuPcWKXaCC9qP" />
+            <Fragment Id="VILIa4PnOomOEXFyzR8K7h" Patch="JTxsVPY2asONQWDRk7dXkq" />
+            <Fragment Id="GXA1NupGPsGP7EILVHTb9S" Patch="KkfUI1FXgDOPWCSnZ93gVl" />
+            <Fragment Id="G9QtEeFIUdhLqC9knyh0qS" Patch="Fkaz3CNtcF6OAvp4FssF4z" />
+            <Fragment Id="SO4FE5Y3pKKNyLAwbqOkA8" Patch="KZYC0Zd6wXaLRotq2oApFg" />
+            <Fragment Id="PifBnpfiekYOfg3R3zsOFd" Patch="BOujNlHdA8TQdBXPHCDuZW" />
+            <Fragment Id="JmMY2eDv0IOO47MOcNkrW4" Patch="RPpxLVzgQA1K9XqcVUm3gP" />
+            <Fragment Id="UdfQpnvTMFiLwuffVuuruU" Patch="Kdiq4wBsBCSM4OCI762u6J" />
+            <Fragment Id="K57xMhW2N58N778S5bD2Ue" Patch="HIXwUOFNiGiP3qJvdq3nYo" />
+            <Fragment Id="UROTEByTWhKMEwG0dj6b5Q" Patch="DQdOlQFFBDjLNdXHEnsZCi" />
+          </ProcessDefinition>
         </Patch>
       </Node>
       <!--
@@ -1003,7 +1878,7 @@
     ************************ Initialize ************************
 
 -->
-      <Node Name="Initialize" Category="IO.gCal" Bounds="520,306" Id="RxZRUB4DedENqgOwXAvzus">
+      <Node Name="Initialize" Bounds="520,306" Id="RxZRUB4DedENqgOwXAvzus">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1118,7 +1993,7 @@
     ************************ SetupListRequest ************************
 
 -->
-      <Node Name="SetupListRequest" Category="IO.gCal" Bounds="520,440" Id="ApohQ6tezWCQZPACenyJTQ">
+      <Node Name="SetupListRequest" Bounds="520,440" Id="ApohQ6tezWCQZPACenyJTQ">
         <p:NodeReference>
           <Choice Kind="ClassDefinition" Name="Class" />
           <FullNameCategoryReference ID="Primitive" />
@@ -1398,7 +2273,7 @@
     ************************ ListCalendars ************************
 
 -->
-      <Node Name="ListCalendars" Category="IO.gCal" Bounds="520,378" Id="GuSUScY3NFbLQIZKKWFNwQ">
+      <Node Name="ListCalendars" Bounds="520,378" Id="GuSUScY3NFbLQIZKKWFNwQ">
         <p:NodeReference>
           <Choice Kind="ContainerDefinition" Name="Process" />
           <FullNameCategoryReference ID="Primitive" />
